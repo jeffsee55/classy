@@ -1,8 +1,6 @@
 @extends('layout.default')
 
 @section('content')
-	<h1>{{ $page_title }}</h1>
-
 	@if (isset($posts))
 		@forelse ($posts as $post)
 			@include ('post.preview')
@@ -12,5 +10,5 @@
 	@endif
 
 	@include ('layout.pagination')
-	
+
 @stop
