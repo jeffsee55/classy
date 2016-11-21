@@ -34,7 +34,7 @@ class Appearance {
 	 */
 	public function enqueue_styles() {
 
-		wp_register_style( 'general_css', CLASSY_THEME_DIR . 'assets/css/general.css', array(), CLASSY_THEME_VERSION, 'all' );
+		wp_enqueue_style( 'main', CLASSY_THEME_DIR . 'dist/css/main.css', array(), CLASSY_THEME_VERSION, 'all' );
 
 	}
 
@@ -45,11 +45,11 @@ class Appearance {
 
 		if ( 'production' === Classy::get_config_var( 'environment' ) ) {
 
-			wp_register_script( 'theme_scripts', CLASSY_THEME_DIR . 'assets/js/min/production.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'dist/js/production.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 
 		} else {
 
-			wp_register_script( 'theme_scripts', CLASSY_THEME_DIR . 'assets/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'dist/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 
 		}
 

@@ -287,6 +287,29 @@ class Post extends Basis {
 	}
 
 	/**
+	 * Returns post date
+	 *
+	 * @return string
+	 */
+	public function get_date() {
+		$date = new \DateTime($this->post_date);
+		$date = date_format($date, 'M d');
+		return $date;
+	}
+
+	/**
+	 * Returns the first/main category name for the post
+	 *
+	 * @return string
+	 */
+	public function get_category() {
+		$categories = wp_get_post_categories($this->ID, [
+			'fields' => 'names'
+		]);
+		return array_shift($categories);
+	}
+
+	/**
 	 * Returns the post content with filters applied.
 	 *
 	 * @param integer $page Page number, in case our post has <!--nextpage--> tags.

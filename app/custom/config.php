@@ -12,7 +12,7 @@
  * @link https://codex.wordpress.org/I18n_for_WordPress_Developers
  * @var string
  */
-$textdomain = 'themename';
+$textdomain = 'classy';
 
 /**
  * Environment.
@@ -21,7 +21,7 @@ $textdomain = 'themename';
  *
  * @var string
  */
-$environment = 'production';
+$environment = 'development';
 
 
 /**
