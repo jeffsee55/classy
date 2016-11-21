@@ -9,7 +9,7 @@
 			<p>{{ $post->get_preview() }}</p>
 		</div>
 		<figure class="column is-half">
-			<img src="{{ $post->thumbnail()->src('medium') }}" alt="">
+			<img src="{{ $post->thumbnail()->src('large') }}" alt="">
 		</figure>
 	</article>
 </section>
