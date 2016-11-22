@@ -18,14 +18,24 @@
         left: 0;
     }
 
-    &.box-left {
-        &:before {
-            right: -4rem;
+    @include from($tablet) {
+        &.box-left {
+            label.category, date {
+                right: -4rem;
+            }
+
+            &:before {
+                right: -4rem;
+            }
         }
-    }
-    &.box-right {
-        &:before {
-            left: -4rem;
+        &.box-right {
+            label.category, date {
+                left: -4rem;
+            }
+
+            &:before {
+                left: -4rem;
+            }
         }
     }
 }

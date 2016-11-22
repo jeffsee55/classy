@@ -3909,6 +3909,10 @@ a.panel-block:hover {
 body {
   font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; }
 
+section.section {
+  padding-left: 0;
+  padding-right: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "mostra-nuova", "Futura", sans-serif;
   font-weight: normal; }
@@ -3937,6 +3941,17 @@ label.category {
 .title {
   margin-top: 20px;
   font-size: 48px; }
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 38px; } }
+
+.preview-text {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media screen and (max-width: 768px) {
+    .preview-text {
+      position: relative;
+      top: -3.5rem; } }
 
 date {
   position: absolute;
@@ -3967,7 +3982,12 @@ date {
     right: 0;
     bottom: 0;
     left: 0; }
-  .box.box-left:before {
-    right: -4rem; }
-  .box.box-right:before {
-    left: -4rem; }
+  @media screen and (min-width: 769px) {
+    .box.box-left label.category, .box.box-left date {
+      right: -4rem; }
+    .box.box-left:before {
+      right: -4rem; }
+    .box.box-right label.category, .box.box-right date {
+      left: -4rem; }
+    .box.box-right:before {
+      left: -4rem; } }

@@ -16,6 +16,19 @@ label.category {
 .title {
     margin-top: 20px;
     font-size: $size-1;
+
+    @include until($tablet) {
+        font-size: $mobile-size-1;
+    }
+}
+
+.preview-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @include until($tablet) {
+        position: relative;
+        top: -3.5rem;
+    }
 }
 
 date {
