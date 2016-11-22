@@ -1,45 +1,116 @@
-label.category {
-    background: $primary;
-    padding: 0.5rem 1rem;
-    color: white;
-    position: absolute;
-    top: -1.1rem;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    width: 175px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.title {
-    margin-top: 20px;
-    font-size: $size-1;
-
-    @include until($tablet) {
-        font-size: $mobile-size-1;
+.text-left {
+    figure {
+        order: 2
     }
 }
 
 .preview-text {
     padding-left: 2rem;
     padding-right: 2rem;
+    position: relative;
+
     @include until($tablet) {
-        position: relative;
         top: -3.5rem;
+    }
+    @include from($tablet) {
+        padding-right: 2rem;
+        padding-left: 0rem;
+
+        &.wide-layout {
+            top: -3.5rem;
+        }
+    }
+
+
+    .box {
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        display: block;
+        padding: 3rem 1.5rem;
+        position: relative;
+
+        &:before {
+            content: "";
+            border: 4px solid transparent;
+            border-image: linear-gradient(to bottom right, #C79A43 0%, #453519 100%);
+            border-image-slice: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        @include from($tablet) {
+            &.box-left {
+                label.category, date {
+                    right: -4rem;
+                }
+
+                &:before {
+                    right: -4rem;
+                }
+            }
+            &.box-right {
+                label.category, date {
+                    left: -4rem;
+                }
+
+                &:before {
+                    left: -4rem;
+                }
+            }
+        }
+
+        label.category {
+            background: $primary;
+            padding: 0.5rem 1rem;
+            color: white;
+            position: absolute;
+            top: -1.1rem;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            width: 175px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .title {
+            margin-top: 20px;
+            font-size: $size-1;
+
+            @include until($tablet) {
+                font-size: $mobile-size-1;
+            }
+        }
+
+        date {
+            position: absolute;
+            bottom: -1.5rem;
+            font-size: 35px;
+            background: white;
+            padding: 0 0.5rem;
+            left: 0;
+            right: 0;
+            width: 90px;
+            margin: auto;
+            text-align: center;
+        }
     }
 }
 
-date {
-    position: absolute;
-    bottom: -1.5rem;
-    font-size: 35px;
-    background: white;
-    padding: 0 0.5rem;
-    left: 0;
-    right: 0;
-    width: 90px;
-    margin: auto;
-    text-align: center;
+.wide {
+    @include until($tablet) {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: $tablet;
+        }
+    }
 }

@@ -1,9 +1,9 @@
-<section class="section preview {{ $post->get_layout() }}">
-	<article class="level columns">
-		<figure class="column is-half">
-			<img src="{{ $post->thumbnail()->src('large') }}" alt="">
+<section class="section preview">
+	<article class="">
+		<figure class="wide">
+			<img src="{{ $post->thumbnail()->src('wide') }}" alt="">
 		</figure>
-		<div class="preview-text column is-half">
+		<div class="column is-half is-offset-3 wide-layout preview-text">
 			<div class="box">
 				<label class="category">{{ $post->get_category() }}</label>
 				<h1 class="title is-large"><a href="{{ $post->permalink() }}">{{ $post->title() }}</a></h1>

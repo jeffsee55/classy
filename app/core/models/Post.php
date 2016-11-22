@@ -94,6 +94,13 @@ class Post extends Basis {
 	public $permalink;
 
 	/**
+	 * The layout used for the post in the archives page
+	 *
+	 * @var string
+	 */
+	public $layout = 'text-right';
+
+	/**
 	 * Main constructor function. If ID won't be provided we will try to find it, based on your query.
 	 *
 	 * @param object|int $post WP_Post or WP_Post.ID.
@@ -307,6 +314,28 @@ class Post extends Basis {
 			'fields' => 'names'
 		]);
 		return array_shift($categories);
+	}
+
+	/**
+	 * Returns the template that belongs to the post
+	 *
+	 * @return string
+	 */
+	public function get_preview_template($layout) {
+		$format = get_post_format($this->ID);
+		if($format == 'image')
+			return 'post.wide';
+
+		if($layout == 'text-left')
+			$this->layout = 'text-right';
+		if($layout == 'text-right')
+			$this->layout = 'text-left';
+
+		return 'post.preview';
+	}
+
+	public function get_layout() {
+		return $this->layout;
 	}
 
 	/**

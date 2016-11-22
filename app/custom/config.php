@@ -54,7 +54,9 @@ $taxonomies = array();
  * @link https://github.com/anrw/classy/wiki/Post-formats
  * @var array
  */
-$post_formats = array();
+$post_formats = array(
+    'image'
+);
 
 /**
  * Sidebars.

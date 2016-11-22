@@ -4,12 +4,12 @@
 
 	@if (isset($posts))
 		@forelse ($posts as $post)
-			@include ('post.preview')
+			@include ($post->get_preview_template())
 		@empty
 			<p>No posts</p>
 		@endforelse
 	@endif
 
 	@include ('layout.pagination')
-	
+
 @stop

@@ -42,7 +42,7 @@ class Image extends Basis {
 	 */
 	public static function get_default_image() {
 		// You can put here any url.
-		return CLASSY_THEME_DIR . '/assets/noimage.png';
+		return CLASSY_THEME_DIR . '/assets/noimage.jpg';
 	}
 
 	/**

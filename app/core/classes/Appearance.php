@@ -110,5 +110,6 @@ class Appearance {
 			'caption',
 		));
 
+		add_image_size('wide', 1500, 500, TRUE);
 	}
 }
