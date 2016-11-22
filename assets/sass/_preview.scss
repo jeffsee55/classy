@@ -3,14 +3,52 @@
         order: 2
     }
 }
+.preview {
+    &.text-center {
+        text-align: center;
+    }
+
+    .text-wrapper {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    @include from($tablet) {
+        &.text-left {
+            padding-left: 0rem;
+            padding-right: 0rem;
+            text-align: left;
+            label.category, date {
+                right: -4rem;
+            }
+
+            .box:before {
+                right: -4rem;
+            }
+        }
+        &.text-right {
+            padding-left: 0rem;
+            padding-right: 0rem;
+            text-align: right;
+            label.category, date {
+                left: -4rem;
+            }
+
+            .box:before {
+                left: -4rem;
+            }
+        }
+    }
+}
+
 
 .preview-text {
-    padding-left: 2rem;
-    padding-right: 2rem;
     position: relative;
 
     @include until($tablet) {
         top: -3.5rem;
+        h1 {
+            text-align: center;
+        }
     }
     @include from($tablet) {
         padding-right: 2rem;
@@ -40,27 +78,6 @@
             right: 0;
             bottom: 0;
             left: 0;
-        }
-
-        @include from($tablet) {
-            &.box-left {
-                label.category, date {
-                    right: -4rem;
-                }
-
-                &:before {
-                    right: -4rem;
-                }
-            }
-            &.box-right {
-                label.category, date {
-                    left: -4rem;
-                }
-
-                &:before {
-                    left: -4rem;
-                }
-            }
         }
 
         label.category {

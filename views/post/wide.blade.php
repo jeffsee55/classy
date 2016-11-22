@@ -1,4 +1,4 @@
-<section class="section preview">
+<section class="section preview text-center">
 	<article class="">
 		<figure class="wide">
 			<img src="{{ $post->thumbnail()->src('wide') }}" alt="">
