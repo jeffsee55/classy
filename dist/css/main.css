@@ -3910,8 +3910,7 @@ body {
   font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; }
 
 section.section {
-  padding-left: 0;
-  padding-right: 0; }
+  padding: 0 0 10rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "mostra-nuova", "Futura", sans-serif;
@@ -3923,6 +3922,15 @@ h1, h2, h3, h4, h5, h6 {
 
 date {
   font-family: "MrsGlows", cursive; }
+
+.bg-stone {
+  background: #ABC1BD !important; }
+
+.bg-rose {
+  background: #CAB3B3 !important; }
+
+.bg-navy {
+  background: #454B61 !important; }
 
 .text-left figure {
   order: 2; }

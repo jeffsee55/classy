@@ -317,6 +317,26 @@ class Post extends Basis {
 	}
 
 	/**
+	 * Returns the first/main category name for the post color
+	 *
+	 * @return string (hex)
+	 */
+	public function get_category_color() {
+		$categories = wp_get_post_categories($this->ID, [
+			'fields' => 'names'
+		]);
+		$category = array_shift($categories);
+		if($category == 'Fitness')
+			return 'bg-stone';
+		if($category == 'Fashion')
+			return 'bg-rose';
+		if($category == 'Feline')
+			return 'bg-navy';
+
+		return 'bg-stone';
+	}
+
+	/**
 	 * Returns the template that belongs to the post
 	 *
 	 * @return string
