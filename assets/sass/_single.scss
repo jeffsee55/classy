@@ -28,6 +28,7 @@ article.single  {
     }
 
     blockquote {
+        background: $light;
 
         p:last-child {
             display: block;
@@ -35,7 +36,7 @@ article.single  {
             font-size: 55px;
             text-align: right;
             margin-bottom: 0;
-            line-height: 0.5;
+            line-height: 1;
         }
     }
 }
