@@ -1,2 +1,1 @@
-@include ('layout.comments.loop')
-@include ('layout.comments.reply')
+<h5>This is where the comments go.</h5>

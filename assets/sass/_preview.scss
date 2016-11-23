@@ -4,8 +4,13 @@
     }
 }
 .preview {
-    &.text-center {
-        text-align: center;
+    text-align: center;
+
+    p {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: justify;
     }
 
     .text-wrapper {
@@ -16,25 +21,31 @@
         &.text-left {
             padding-left: 0rem;
             padding-right: 0rem;
-            text-align: left;
             label.category, date {
                 right: -4rem;
             }
 
             .box:before {
                 right: -4rem;
+            }
+
+            p {
+                text-align: justify;
             }
         }
         &.text-right {
             padding-left: 0rem;
             padding-right: 0rem;
-            text-align: right;
             label.category, date {
                 left: -4rem;
             }
 
             .box:before {
                 left: -4rem;
+            }
+
+            p {
+                text-align: justify;
             }
         }
     }
@@ -60,25 +71,6 @@
     }
 
 
-    .box {
-        background-color: transparent;
-        border-radius: 0;
-        box-shadow: none;
-        display: block;
-        padding: 3rem 1.5rem;
-        position: relative;
-
-        &:before {
-            content: "";
-            border: 4px solid transparent;
-            border-image: linear-gradient(to bottom right, #C79A43 0%, #453519 100%);
-            border-image-slice: 1;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
 
         label.category {
             background: $primary;
@@ -116,7 +108,6 @@
             margin: auto;
             text-align: center;
         }
-    }
 }
 
 .wide {
@@ -129,5 +120,48 @@
         img {
             max-width: $tablet;
         }
+    }
+}
+
+.box {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    padding: 3rem 1.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &.half {
+        &:before {
+            border-top: none;
+            border-right: none;
+        }
+
+        date {
+            font-size: 46px;
+            color: white;
+        }
+    }
+
+    &.bottom {
+        padding: 0 0 1rem 0;
+        &:before {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+    }
+
+    &:before {
+        content: "";
+        border: 3px solid transparent;
+        border-image: linear-gradient(to right, #C79A43 0%, #453519 100%);
+        border-image-slice: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 }

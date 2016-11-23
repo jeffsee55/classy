@@ -1,0 +1,45 @@
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .title {
+        font-size: 72px;
+        color: white;
+
+        @include until($tablet) {
+            font-size: $size-1;
+        }
+    }
+}
+article.single  {
+    max-width: $tablet;
+    margin: 2rem auto;
+
+    @include until($tablet) {
+        p {
+            text-align: justify;
+        }
+    }
+
+    @include until($tablet) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    blockquote {
+
+        p:last-child {
+            display: block;
+            font-family: 'MrsGlows';
+            font-size: 55px;
+            text-align: right;
+            margin-bottom: 0;
+            line-height: 0.5;
+        }
+    }
+}
+
+.social {
+    color: $grey-light;
+}

@@ -1,5 +1,15 @@
 body {
     font-family: $family-sans-serif;
+    font-size: $size-5;
+}
+
+p {
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.content a:not(.button) {
+    border-bottom: none;
 }
 
 section.section {
@@ -16,8 +26,14 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: normal;
     }
 }
+.title {
+    font-weight: normal;
+    text-transform: uppercase;
+}
 
 date {
+    text-decoration: none;
+    color: $grey-dark;
     font-family: $family-cursive;
 }
 

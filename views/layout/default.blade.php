@@ -7,6 +7,7 @@
         <link rel="pingback" href="{{ bloginfo('pingback_url') }}" />
         <link rel="alternate" type="application/rss+xml" title="{{ bloginfo('name') }} RSS Feed" href="{{ bloginfo('rss2_url') }}" />
         <link rel="shortcut icon" href="{{ CLASSY_THEME_DIR }}assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/855ce7e6ed.js"></script>
         <script src="https://use.typekit.net/xeo3irf.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <title>{{ wp_title('|', true, 'right'); }}</title>

@@ -2,10 +2,21 @@
 
 @section('content')
 	@if ($post)
-		<article>
-			<h1>{{ $post->title() }}</h1>
-			
-			<section class="body">
+		<section class="hero is-medium" style="background-image: url({{ $post->thumbnail()->src('wide') }})">
+			<div class="hero-body">
+				<div class="container">
+					<div class="column is-half box half">
+						<date>{{ $post->get_date() }}</date>
+						<h1 class="title">
+							{{ $post->title() }}
+						</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<article class="single">
+			<section class="body content">
+				@include ('post.partials.social')
 				{{ $post->content() }}
 			</section>
 

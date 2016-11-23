@@ -3907,7 +3907,15 @@ a.panel-block:hover {
         border-bottom-color: #00d1b2; }
 
 body {
-  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; }
+  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+  font-size: 18px; }
+
+p {
+  margin-bottom: 2rem;
+  overflow: hidden; }
+
+.content a:not(.button) {
+  border-bottom: none; }
 
 section.section {
   padding: 0 0 10rem; }
@@ -3920,7 +3928,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a4a4a;
     font-weight: normal; }
 
+.title {
+  font-weight: normal;
+  text-transform: uppercase; }
+
 date {
+  text-decoration: none;
+  color: #4a4a4a;
   font-family: "MrsGlows", cursive; }
 
 .bg-stone {
@@ -3935,30 +3949,35 @@ date {
 .text-left figure {
   order: 2; }
 
-.preview.text-center {
+.preview {
   text-align: center; }
-
-.preview .text-wrapper {
-  padding-right: 1rem;
-  padding-left: 1rem; }
-
-@media screen and (min-width: 769px) {
-  .preview.text-left {
-    padding-left: 0rem;
-    padding-right: 0rem;
-    text-align: left; }
-    .preview.text-left label.category, .preview.text-left date {
-      right: -4rem; }
-    .preview.text-left .box:before {
-      right: -4rem; }
-  .preview.text-right {
-    padding-left: 0rem;
-    padding-right: 0rem;
-    text-align: right; }
-    .preview.text-right label.category, .preview.text-right date {
-      left: -4rem; }
-    .preview.text-right .box:before {
-      left: -4rem; } }
+  .preview p {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: justify; }
+  .preview .text-wrapper {
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  @media screen and (min-width: 769px) {
+    .preview.text-left {
+      padding-left: 0rem;
+      padding-right: 0rem; }
+      .preview.text-left label.category, .preview.text-left date {
+        right: -4rem; }
+      .preview.text-left .box:before {
+        right: -4rem; }
+      .preview.text-left p {
+        text-align: justify; }
+    .preview.text-right {
+      padding-left: 0rem;
+      padding-right: 0rem; }
+      .preview.text-right label.category, .preview.text-right date {
+        left: -4rem; }
+      .preview.text-right .box:before {
+        left: -4rem; }
+      .preview.text-right p {
+        text-align: justify; } }
 
 .preview-text {
   position: relative; }
@@ -3973,53 +3992,36 @@ date {
       padding-left: 0rem; }
       .preview-text.wide-layout {
         top: -3.5rem; } }
-  .preview-text .box {
-    background-color: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    display: block;
-    padding: 3rem 1.5rem;
-    position: relative; }
-    .preview-text .box:before {
-      content: "";
-      border: 4px solid transparent;
-      border-image: linear-gradient(to bottom right, #C79A43 0%, #453519 100%);
-      border-image-slice: 1;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0; }
-    .preview-text .box label.category {
-      background: #00d1b2;
-      padding: 0.5rem 1rem;
-      color: white;
-      position: absolute;
-      top: -1.1rem;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      width: 175px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px; }
-    .preview-text .box .title {
-      margin-top: 20px;
-      font-size: 48px; }
-      @media screen and (max-width: 768px) {
-        .preview-text .box .title {
-          font-size: 38px; } }
-    .preview-text .box date {
-      position: absolute;
-      bottom: -1.5rem;
-      font-size: 35px;
-      background: white;
-      padding: 0 0.5rem;
-      left: 0;
-      right: 0;
-      width: 90px;
-      margin: auto;
-      text-align: center; }
+  .preview-text label.category {
+    background: #00d1b2;
+    padding: 0.5rem 1rem;
+    color: white;
+    position: absolute;
+    top: -1.1rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 175px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .preview-text .title {
+    margin-top: 20px;
+    font-size: 48px; }
+    @media screen and (max-width: 768px) {
+      .preview-text .title {
+        font-size: 38px; } }
+  .preview-text date {
+    position: absolute;
+    bottom: -1.5rem;
+    font-size: 35px;
+    background: white;
+    padding: 0 0.5rem;
+    left: 0;
+    right: 0;
+    width: 90px;
+    margin: auto;
+    text-align: center; }
 
 @media screen and (max-width: 768px) {
   .wide {
@@ -4029,3 +4031,76 @@ date {
     justify-content: center; }
     .wide img {
       max-width: 769px; } }
+
+.box {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  padding: 3rem 1.5rem;
+  position: relative;
+  margin-bottom: 2rem; }
+  .box.half:before {
+    border-top: none;
+    border-right: none; }
+  .box.half date {
+    font-size: 46px;
+    color: white; }
+  .box.bottom {
+    padding: 0 0 1rem 0; }
+    .box.bottom:before {
+      border-top: none;
+      border-right: none;
+      border-left: none; }
+  .box:before {
+    content: "";
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, #C79A43 0%, #453519 100%);
+    border-image-slice: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .hero .title {
+    font-size: 72px;
+    color: white; }
+    @media screen and (max-width: 768px) {
+      .hero .title {
+        font-size: 48px; } }
+
+article.single {
+  max-width: 769px;
+  margin: 2rem auto; }
+  @media screen and (max-width: 768px) {
+    article.single p {
+      text-align: justify; } }
+  @media screen and (max-width: 768px) {
+    article.single {
+      margin-left: 1rem;
+      margin-right: 1rem; } }
+  article.single blockquote p:last-child {
+    display: block;
+    font-family: 'MrsGlows';
+    font-size: 55px;
+    text-align: right;
+    margin-bottom: 0;
+    line-height: 0.5; }
+
+.social {
+  color: #b5b5b5; }
+
+article.page {
+  padding: 3rem 2rem; }
+  @media screen and (max-width: 768px) {
+    article.page {
+      padding: 3rem 1rem; }
+      article.page p {
+        text-align: justify; } }
+  article.page .title {
+    font-size: 40px; }
