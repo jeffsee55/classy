@@ -4064,6 +4064,24 @@ date {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  .hero.overlay {
+    position: relative; }
+    .hero.overlay:before {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: '';
+      background: rgba(54, 54, 54, 0.2); }
+  .hero .container {
+    display: flex; }
+    .hero .container.is-left {
+      justify-content: flex-start; }
+    .hero .container.is-center {
+      justify-content: center; }
+    .hero .container.is-right {
+      justify-content: flex-end; }
   .hero .title {
     font-size: 72px;
     color: white; }

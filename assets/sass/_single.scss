@@ -3,6 +3,32 @@
     background-size: cover;
     background-position: center;
 
+    &.overlay {
+        position: relative;
+
+        &:before {
+            @include overlay();
+            content: '';
+            background: transparentize($grey-darker, 0.8);
+        }
+    }
+
+    .container {
+        display: flex;
+
+        &.is-left {
+            justify-content: flex-start;
+        }
+
+        &.is-center {
+            justify-content: center;
+        }
+
+        &.is-right {
+            justify-content: flex-end;
+        }
+    }
+
     .title {
         font-size: 72px;
         color: white;

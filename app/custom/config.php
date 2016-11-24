@@ -55,7 +55,6 @@ $taxonomies = array();
  * @var array
  */
 $post_formats = array(
-    'image'
 );
 
 /**

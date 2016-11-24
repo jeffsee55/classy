@@ -61,6 +61,8 @@ class Classy {
 		$this->load_custom_includes();
 
 		add_filter( 'theme_page_templates', array( $this, 'filter_templates' ) );
+
+		add_action('admin_init', [$this, 'init_admin']);
 	}
 
 	/**
@@ -68,6 +70,13 @@ class Classy {
 	 */
 	private function init_appearance() {
 		new Appearance();
+	}
+
+	/**
+	 * Init Admin class.
+	 */
+	public function init_admin() {
+		new Admin();
 	}
 
 	/**

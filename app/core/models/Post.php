@@ -342,8 +342,8 @@ class Post extends Basis {
 	 * @return string
 	 */
 	public function get_preview_template($layout) {
-		$format = get_post_format($this->ID);
-		if($format == 'image')
+		$format = get_post_meta($this->ID, '_archive_layout', true);
+		if($format == 'wide')
 			return 'post.wide';
 
 		if($layout == 'text-left')
@@ -356,6 +356,22 @@ class Post extends Basis {
 
 	public function get_layout() {
 		return $this->layout;
+	}
+
+	public function title_position() {
+		$position = get_post_meta($this->ID, '_title_position', true);
+		if(isset($position))
+			return 'is-' . $position;
+
+		return 'is-left';
+	}
+
+	public function maybe_overlay() {
+		$overlay = get_post_meta($this->ID, '_title_overlay', true);
+		if($overlay == 0)
+			return '';
+
+		return 'overlay';
 	}
 
 	/**

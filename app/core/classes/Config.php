@@ -201,7 +201,7 @@ class Config {
 	 * @param array $post_formats Array with available post formats.
 	 */
 	private static function init_post_formats( $post_formats ) {
-		if ( is_array( $post_formats ) ) {
+		if ( is_array( $post_formats && !empty($post_formats) ) ) {
 			add_theme_support( 'post-formats', $post_formats );
 		}
 	}
