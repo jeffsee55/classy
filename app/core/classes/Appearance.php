@@ -48,7 +48,7 @@ class Appearance {
 
 		} else {
 
-			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'dist/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'assets/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 
 		}
 

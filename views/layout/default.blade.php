@@ -17,10 +17,12 @@
 
         {{ get_header() }}
 
-        @yield('content')
+        <main>
+            @yield('content')
 
-        {{ get_footer() }}
+            {{ get_footer() }}
 
-        {{ wp_footer() }}
+            {{ wp_footer() }}
+        <main>
     </body>
 </html>

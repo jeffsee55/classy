@@ -5,4 +5,4 @@
 		<date>{{ $post->get_date() }}</date>
 	</div>
 </a>
-<p>{{ $post->get_preview() }}</p>
+<div class="preview-excerpt">{{ $post->get_preview() }}</div>

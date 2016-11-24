@@ -6,11 +6,27 @@
 .preview {
     text-align: center;
 
-    p {
+    .preview-excerpt {
         display: block;
         max-width: 300px;
         margin: 0 auto;
         text-align: justify;
+
+        blockquote {
+            border-left: 2px solid $grey-lighter;
+            padding-left: 1rem;
+
+            em,
+            cite,
+            p:last-child {
+                display: block;
+                font-family: 'MrsGlows';
+                font-size: $size-3;
+                text-align: right;
+                margin-bottom: 0;
+                line-height: 1;
+            }
+        }
     }
 
     .text-wrapper {

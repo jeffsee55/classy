@@ -3,6 +3,10 @@ body {
     font-size: $size-5;
 }
 
+main {
+    padding-top: $nav-height;
+}
+
 p {
     margin-bottom: 2rem;
     overflow: hidden;

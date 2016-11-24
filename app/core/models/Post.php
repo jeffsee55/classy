@@ -457,7 +457,7 @@ class Post extends Basis {
 	 *
 	 * @return string            Post preview.
 	 */
-	public function get_preview( $len = 50, $force = false, $readmore = 'continue', $strip = true ) {
+	public function get_preview( $len = 50, $force = false, $readmore = 'continue', $strip = false) {
 		$text = '';
 		$trimmed = false;
 

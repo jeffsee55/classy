@@ -1,14 +1,27 @@
-article.page {
-    padding: 3rem 2rem;
-    @include until($tablet) {
-        padding: 3rem 1rem;
+.page-layout {
 
-        p {
-            text-align: justify;
+    figure {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        
+        img {
+            max-width: none;
         }
     }
 
-    .title {
-        font-size: $size-2;
+    article.page {
+        padding: 3rem 2rem;
+        @include until($tablet) {
+            padding: 3rem 1rem;
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        .title {
+            font-size: $size-2;
+        }
     }
 }
