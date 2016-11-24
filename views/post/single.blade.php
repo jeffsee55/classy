@@ -5,7 +5,7 @@
 		<section class="hero is-medium {{ $post->maybe_overlay() }}" style="background-image: url({{ $post->thumbnail()->src('wide') }})">
 			<div class="hero-body">
 				<div class="container {{ $post->title_position() }}">
-					<div class="column is-half box half">
+					<div class="column is-half box">
 						<date>{{ $post->get_date() }}</date>
 						<h1 class="title">
 							{{ $post->title() }}
