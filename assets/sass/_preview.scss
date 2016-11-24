@@ -149,14 +149,9 @@
     margin-bottom: 2rem;
 
     &.half {
-        // &:before {
-        //     border-top: none;
-        //     border-right: none;
-        // }
-
-        date {
-            font-size: 46px;
-            color: white;
+        &:before {
+            border-top: none;
+            border-right: none;
         }
     }
 
@@ -179,5 +174,13 @@
         right: 0;
         bottom: 0;
         left: 0;
+    }
+}
+
+.half-box {
+    @extend .box;
+    &:before {
+        border-top: none;
+        border-right: none;
     }
 }

@@ -54,7 +54,10 @@ article.single  {
     }
 
     blockquote {
-        background: $light;
+        @extend .half-box;
+        border-left: none;
+        font-size: $size-3;
+        padding: 1.5rem;
 
         p:last-child {
             display: block;
