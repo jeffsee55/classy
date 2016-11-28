@@ -3959,7 +3959,7 @@ date {
   text-align: center; }
   .preview .preview-excerpt {
     display: block;
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: justify; }
     .preview .preview-excerpt blockquote {

@@ -18,7 +18,7 @@
 					@endforeach
 				@endif
 				{{ get_custom_logo() }}
-				@if ($items = $menu->get_items(0, 2))
+				@if ($items = $menu->get_items(2, 2))
 					@foreach ($items as $item)
 						<span class="nav-item is-tab"><a href="{{ $item->get_link() }}">{{ $item->get_title() }}</a>
 						@if (!empty($item->get_children()))

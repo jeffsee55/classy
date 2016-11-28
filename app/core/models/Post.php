@@ -322,15 +322,12 @@ class Post extends Basis {
 	 * @return string (hex)
 	 */
 	public function get_category_color() {
-		$categories = wp_get_post_categories($this->ID, [
-			'fields' => 'names'
-		]);
-		$category = array_shift($categories);
-		if($category == 'Fitness')
+		$category = strtolower($this->get_category());
+		if($category == 'fitness')
 			return 'bg-stone';
-		if($category == 'Fashion')
+		if($category == 'fashion')
 			return 'bg-rose';
-		if($category == 'Feline')
+		if($category == 'feline')
 			return 'bg-navy';
 
 		return 'bg-stone';
@@ -457,7 +454,7 @@ class Post extends Basis {
 	 *
 	 * @return string            Post preview.
 	 */
-	public function get_preview( $len = 50, $force = false, $readmore = 'continue', $strip = false) {
+	public function get_preview( $len = 30, $force = false, $readmore = 'continue', $strip = false) {
 		$text = '';
 		$trimmed = false;
 
