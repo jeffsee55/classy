@@ -1,0 +1,30 @@
+footer {
+    background: $light;
+    color: $grey-light;
+
+    & > div {
+        padding: 1rem;
+
+        .social {
+            padding: 0.7rem;
+        }
+
+        @include until($tablet) {
+            padding: 0.6rem;
+
+            .social {
+                padding: 0;
+
+                .icon {
+                    font-size: 18px;
+                    height: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .level-right.copyright {
+        margin-top: 0;
+    }
+}

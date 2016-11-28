@@ -3949,6 +3949,9 @@ date {
 .bg-navy {
   background: #454B61 !important; }
 
+.is-visible {
+  visibility: visible !important; }
+
 .text-left figure {
   order: 2; }
 
@@ -4101,6 +4104,9 @@ date {
       justify-content: center; }
     .hero .container.is-right {
       justify-content: flex-end; }
+  .hero date {
+    color: white;
+    font-size: 40px; }
   .hero .title {
     font-size: 72px;
     color: white; }
@@ -4151,18 +4157,62 @@ article.single {
     font-size: 40px; }
 
 header .nav {
-  background: whitesmoke;
+  background: #FFF;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
   z-index: 100;
   /* Force Hardware Acceleration */
   transform: translateZ(0);
   will-change: transform;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s; }
+  header .nav .nav-center {
+    flex: 1;
+    justify-content: space-around; }
+    header .nav .nav-center aside.menu {
+      position: absolute;
+      visibility: hidden;
+      top: 100%;
+      background: white; }
+      @media screen and (max-width: 768px) {
+        header .nav .nav-center aside.menu {
+          left: 0;
+          right: 0; } }
+      header .nav .nav-center aside.menu ul.menu-list li a {
+        padding: 1rem 2rem; }
+    header .nav .nav-center .custom-logo-link {
+      padding: 1rem 1.3rem; }
+      @media screen and (max-width: 768px) {
+        header .nav .nav-center .custom-logo-link {
+          position: absolute;
+          width: 150px;
+          padding: 1rem 0; } }
+    @media screen and (max-width: 768px) {
+      header .nav .nav-center .nav-item {
+        margin-top: 3rem;
+        padding: 0.75rem 0.5rem 0.75rem;
+        font-size: 14px; } }
   header .nav.hide {
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%); }
+
+footer {
+  background: whitesmoke;
+  color: #b5b5b5; }
+  footer > div {
+    padding: 1rem; }
+    footer > div .social {
+      padding: 0.7rem; }
+    @media screen and (max-width: 768px) {
+      footer > div {
+        padding: 0.6rem; }
+        footer > div .social {
+          padding: 0; }
+          footer > div .social .icon {
+            font-size: 18px;
+            height: 24px;
+            line-height: 24px; } }
+  footer .level-right.copyright {
+    margin-top: 0; }

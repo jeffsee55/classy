@@ -1,5 +1,3 @@
-document.write("It works.");
-
 jQuery(document).ready(function($){
 	var mainHeader = $('header .nav'),
 		headerHeight = mainHeader.height();
@@ -59,4 +57,9 @@ jQuery(document).ready(function($){
     			: requestAnimationFrame(autoHideHeader);
     	}
     });
+
+	$('header .nav-item').hover(function() {
+		console.log('show');
+		$(this).find('aside.menu').toggleClass('is-visible');
+	});
 });

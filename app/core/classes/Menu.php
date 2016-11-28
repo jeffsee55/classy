@@ -185,7 +185,7 @@ class Menu {
 	 *
 	 * @return array
 	 */
-	public function get_items() {
-		return $this->items;
+	public function get_items($offset = null, $length = null) {
+		return array_slice($this->items, $offset, $length, true);
 	}
 }
