@@ -3,6 +3,22 @@ body {
     font-size: $size-5;
 }
 
+@include from($tablet) {
+    .admin-bar {
+        main {
+            padding-top: $nav-height + 32px;
+        }
+
+        header .nav {
+            top: 32px;
+        }
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 main {
     padding-top: $nav-height;
 }

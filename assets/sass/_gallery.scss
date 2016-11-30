@@ -1,12 +1,21 @@
-.gallery-1 {
+.gallery {
+    @include from($tablet) {
+        margin: auto -100px;
+    }
 
+    .gallery-image {
+        background-size: cover;
+        background-position: center;
+    }
 }
 
-.gallery-columns-2 {
-    @extend .columns;
+.gallery-tile {
+    .tile {
+        background-size: cover;
+        background-position: center;
 
-    .gallery-item {
-        @extend .column;
-        @extend .is-half;
+        &.is-child {
+            min-height: 15rem;
+        }
     }
 }

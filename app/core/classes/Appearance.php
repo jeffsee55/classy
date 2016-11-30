@@ -24,6 +24,8 @@ class Appearance {
 
 		add_action( 'wp_print_scripts', array( $this, 'init_js_vars' ) );
 
+		add_filter( 'post_gallery', array($this, 'add_gallery_classes'), 10, 3 );
+
 		add_action( 'after_setup_theme', array( $this, 'setup_theme' ) );
 
 	}
@@ -52,6 +54,11 @@ class Appearance {
 
 		}
 
+	}
+
+	public function add_gallery_classes($output = '', $atts, $instance) {
+		$gallery = new Gallery($output = '', $atts, $instance);
+		return $gallery->display();
 	}
 
 	/**

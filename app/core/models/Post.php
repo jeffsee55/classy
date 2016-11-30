@@ -317,6 +317,15 @@ class Post extends Basis {
 	}
 
 	/**
+	 * Returns the list of tags
+	 *
+	 * @return array
+	 */
+	public function get_tags() {
+		return wp_get_post_tags( $this->ID, ['fields' => 'names']);
+	}
+
+	/**
 	 * Returns the first/main category name for the post color
 	 *
 	 * @return string (hex)
@@ -454,7 +463,7 @@ class Post extends Basis {
 	 *
 	 * @return string            Post preview.
 	 */
-	public function get_preview( $len = 30, $force = false, $readmore = 'continue', $strip = false) {
+	public function get_preview( $len = 30, $force = false, $readmore = 'continue', $strip = true) {
 		$text = '';
 		$trimmed = false;
 
