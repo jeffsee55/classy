@@ -4,8 +4,8 @@
 			<date>{{ $post->get_date() }}</date>
         </a>
 		@foreach($post->get_tags() as $tag)
-            <a class="nav-item label">
-                <span class="tag">{{ $tag }}</span>
+            <a href="{{ get_term_link($tag->term_id) }}" class="nav-item label">
+                <span class="tag">{{ $tag->name }}</span>
             </a>
         @endforeach
     </div>

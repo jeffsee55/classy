@@ -3909,6 +3909,20 @@ a.panel-block:hover {
 body {
   font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
   font-size: 18px; }
+  body.tag {
+    height: initial;
+    align-items: initial;
+    background-color: initial;
+    border-radius: initial;
+    color: initial;
+    display: initial;
+    font-size: initial;
+    justify-content: initial;
+    line-height: initial;
+    padding-left: initial;
+    padding-right: initial;
+    vertical-align: initial;
+    white-space: initial; }
 
 @media screen and (min-width: 769px) {
   .admin-bar main {

@@ -322,7 +322,7 @@ class Post extends Basis {
 	 * @return array
 	 */
 	public function get_tags() {
-		return wp_get_post_tags( $this->ID, ['fields' => 'names']);
+		return wp_get_post_tags( $this->ID );
 	}
 
 	/**
@@ -347,7 +347,7 @@ class Post extends Basis {
 	 *
 	 * @return string
 	 */
-	public function get_preview_template($layout) {
+	public function get_preview_template($layout = 'text-left') {
 		$format = get_post_meta($this->ID, '_archive_layout', true);
 		if($format == 'wide')
 			return 'post.wide';

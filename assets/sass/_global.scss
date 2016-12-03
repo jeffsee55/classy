@@ -1,6 +1,24 @@
 body {
     font-family: $family-sans-serif;
     font-size: $size-5;
+
+    // bulma doesn't drill down for its tag class
+    // so the body for tag archives gets this class added
+    &.tag {
+        height: initial;
+        align-items: initial;
+        background-color: initial;
+        border-radius: initial;
+        color: initial;
+        display: initial;
+        font-size: initial;
+        justify-content: initial;
+        line-height: initial;
+        padding-left: initial;
+        padding-right: initial;
+        vertical-align: initial;
+        white-space: initial;
+    }
 }
 
 @include from($tablet) {
