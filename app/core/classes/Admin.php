@@ -48,6 +48,20 @@ class Admin {
             'post',
             'side'
         );
+        add_meta_box(
+            'title-position',
+            __( 'Title Position', 'heid-and-seek' ),
+            [$this, 'renderTitlePostionMetaBox'],
+            'page',
+            'side'
+        );
+        add_meta_box(
+            'title-overlay',
+            __( 'Title Overlay', 'heid-and-seek' ),
+            [$this, 'renderTitleOverlayMetaBox'],
+            'page',
+            'side'
+        );
     }
 
     /**
