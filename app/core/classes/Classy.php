@@ -70,6 +70,7 @@ class Classy {
 	 */
 	private function init_appearance() {
 		new Appearance();
+		new Media();
 	}
 
 	/**
@@ -275,6 +276,21 @@ class Classy {
 
 		return Helper::get_archives_title();
 
+	}
+
+	/**
+	 * Returns archive object.
+	 *
+	 * @param  mixed  $args 		Array of query args.
+	 * @param  string $return_type 	Post/object/id.
+	 *
+	 * @return mixed
+	 */
+	public static function get_term() {
+
+		$object = get_queried_object();
+
+		return new \Classy\Models\Term($object);
 	}
 
 	/**

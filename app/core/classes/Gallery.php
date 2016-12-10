@@ -36,7 +36,7 @@ class Gallery
             $html .= $this->singleColumnImages();
     	if($this->columns == 2)
             $html .= $this->doubleColumnImages();
-    	if($this->columns == 2)
+    	if($this->columns == 3)
             $html .= $this->tileImages();
     	$html .= '</div>';
     	return $html;

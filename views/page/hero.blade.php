@@ -15,10 +15,8 @@
     	</div>
     </section>
 
-    @if (is_front_page())
-    	@if (isset($posts))
-    		@include ('post.partials.list')
-    	@endif
+	@if (isset($posts))
+		@include ('post.partials.list')
 	@endif
 
 @stop

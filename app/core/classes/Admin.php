@@ -27,6 +27,9 @@ class Admin {
      */
     public function registerMetaBoxes($post)
     {
+		global $post;
+		$pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
+
         add_meta_box(
             'archive-layout',
             __( 'Archive Layout', 'heid-and-seek' ),
@@ -62,6 +65,27 @@ class Admin {
             'page',
             'side'
         );
+		if($pageTemplate = 'classy-about')
+		{
+	        add_meta_box(
+	            'contact-primary',
+	            __( 'Contact Primary', 'heid-and-seek' ),
+	            [$this, 'renderContactDetails'],
+	            'page',
+	            'normal',
+				'low',
+				['order' => 'primary']
+	        );
+	        add_meta_box(
+	            'contact-secondary',
+	            __( 'Contact Secondary', 'heid-and-seek' ),
+	            [$this, 'renderContactDetails'],
+	            'page',
+	            'normal',
+				'low',
+				['order' => 'secondary']
+	        );
+		}
     }
 
     /**
@@ -131,6 +155,45 @@ class Admin {
         <?php
     }
 
+	public function renderContactDetails($post, $meta)
+	{
+		$order = $meta['args']['order'];
+		$existing = get_post_meta($post->ID, '_contact', true);
+		if(isset($existing))
+			$existing = $existing[$order];
+		?>
+		<label>Message</label>
+		<br>
+		<input type="text" name="_contact[<?= $order ?>][message]" value="<?= $existing['message']; ?>">
+		<br>
+
+		<label>Email</label>
+		<br>
+		<input type="text" name="_contact[<?= $order ?>][email]" value="<?= $existing['email']; ?>">
+		<br>
+
+		<label>Facebook</label>
+		<br>
+		<input type="text" name="_contact[<?= $order ?>][facebook]" value="<?= $existing['facebook']; ?>">
+		<br>
+
+		<label>Instagram</label>
+		<br>
+		<input type="text" name="_contact[<?= $order ?>][instagram]" value="<?= $existing['instagram']; ?>">
+		<br>
+
+		<label>Twitter</label>
+		<br>
+		<input type="text" name="_contact[<?= $order ?>][twitter]" value="<?= $existing['twitter']; ?>">
+		<br>
+
+		<label>Pinterest</label>
+		<br>
+		<input type="text" name="_contact[<?= $order ?>][pinterest]" value="<?= $existing['pinterest']; ?>">
+
+		<?php
+	}
+
     /**
      * Save meta box content.
      *
@@ -145,5 +208,8 @@ class Admin {
 
         if(isset($_POST['_title_overlay']))
             update_post_meta($post_id, '_title_overlay', $_POST['_title_overlay']);
+
+        if(isset($_POST['_contact']))
+            update_post_meta($post_id, '_contact', $_POST['_contact']);
     }
 }

@@ -30,6 +30,7 @@ class Basis {
 				$data = $data['data'];
 			}
 
+
 			foreach ( $data as $key => $value ) {
 				if ( ! empty( $key ) ) {
 					$this->$key = $value;

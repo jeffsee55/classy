@@ -1,4 +1,8 @@
 .gallery {
+    &.columns.flex-wrap {
+        margin-bottom: 0;
+    }
+
     @include from($tablet) {
         margin: auto -100px;
     }

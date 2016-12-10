@@ -4042,7 +4042,9 @@ date {
   position: relative; }
   @media screen and (max-width: 768px) {
     .preview-text {
-      top: -3.5rem; }
+      top: -3rem; }
+      .preview-text.wide-layout {
+        top: -4rem; }
       .preview-text h1 {
         text-align: center; } }
   @media screen and (min-width: 769px) {
@@ -4050,7 +4052,7 @@ date {
       padding-right: 2rem;
       padding-left: 0rem; }
       .preview-text.wide-layout {
-        top: -3.5rem; } }
+        top: -4rem; } }
   .preview-text label.category {
     background: #ABC1BD;
     padding: 0.5rem 1rem;
@@ -4099,6 +4101,9 @@ date {
   padding: 3rem 1.5rem;
   position: relative;
   margin-bottom: 2rem; }
+  .box a, .half-box a, article.single blockquote a {
+    position: relative;
+    z-index: 1000; }
   .box.half:before, .half.half-box:before, article.single blockquote.half:before {
     border-top: none;
     border-right: none; }
@@ -4205,6 +4210,12 @@ article.single {
         text-align: justify; } }
   .page-layout article.page .title {
     font-size: 40px; }
+
+.contact-info.columns.is-gapless {
+  margin-top: 5rem; }
+
+.gallery.columns.flex-wrap {
+  margin-bottom: 0; }
 
 @media screen and (min-width: 769px) {
   .gallery {

@@ -294,6 +294,15 @@ class Post extends Basis {
 	}
 
 	/**
+	 * Alias for get_title.
+	 *
+	 * @return string
+	 */
+	public function meta($key) {
+		return get_post_meta($this->ID, $key, true);
+	}
+
+	/**
 	 * Returns post date
 	 *
 	 * @return string
