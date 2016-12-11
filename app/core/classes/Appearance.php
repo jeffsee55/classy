@@ -51,6 +51,7 @@ class Appearance {
 		} else {
 
 			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'assets/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'header_script', CLASSY_THEME_DIR . 'assets/js/header.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 			wp_enqueue_script( 'media_script', CLASSY_THEME_DIR . 'assets/js/media.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 
 		}

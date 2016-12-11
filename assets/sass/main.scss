@@ -1,29 +1,14 @@
 @import "variables";
-@font-face {
-  font-family: 'AvenirNext';
-  src:  url('../fonts/AvenirNext-Regular.woff2') format('woff2'),
-        url('../fonts/AvenirNext-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AvenirNext';
-  src:  url('../fonts/AvenirNext-DemiBold.woff2') format('woff2'),
-        url('../fonts/AvenirNext-DemiBold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MrsGlows';
-  src:  url('../fonts/MrsGlows.otf') format('otf');
-  font-style: normal;
-}
 @import "../../node_modules/bulma/bulma";
-@import "global";
-@import "preview";
-@import "single";
-@import "about";
-@import "gallery";
-@import "header";
-@import "footer";
-@import "home";
+
+@import "common/footer";
+@import "common/gallery";
+@import "common/global";
+@import "common/header";
+@import "common/single";
+
+@import "components/about";
+@import "components/box";
+@import "components/colors";
+@import "components/fonts";
+@import "components/preview";

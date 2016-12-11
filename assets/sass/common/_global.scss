@@ -90,22 +90,16 @@ h5 {
     text-transform: uppercase;
 }
 
+.text-left {
+    figure {
+        order: 2
+    }
+}
+
 date {
     text-decoration: none;
     color: $grey-dark;
     font-family: $family-cursive;
-}
-
-.bg-stone {
-    background: $stone !important;
-}
-
-.bg-rose {
-    background: $rose !important;
-}
-
-.bg-navy {
-    background: $navy !important;
 }
 
 .is-visible {

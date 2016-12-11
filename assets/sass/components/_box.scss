@@ -1,0 +1,50 @@
+.box {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    padding: 3rem 1.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+    a {
+        position: relative;
+        z-index: 1000;
+    }
+
+    &.half {
+        &:before {
+            border-top: none;
+            border-right: none;
+        }
+    }
+
+    &.bottom {
+        padding: 0 0 1rem 0;
+        &:before {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+    }
+
+    &:before {
+        content: "";
+        border: 3px solid transparent;
+        border-image: linear-gradient(to right, #C79A43 0%, #453519 100%);
+        border-image-slice: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.half-box {
+    @extend .box;
+    &:before {
+        border-top: none;
+        border-right: none;
+    }
+}
