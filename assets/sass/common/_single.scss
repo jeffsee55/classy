@@ -1,7 +1,19 @@
+.category-hero {
+    .box-wrapper {
+        background: #f5f5f5;
+        padding: 5rem 4rem;
+        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.19);
+    }
+}
+
 .hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    &.home-hero {
+        margin-bottom: 5rem;
+    }
 
     &.overlay {
         position: relative;
@@ -58,7 +70,8 @@ article.single  {
     }
 
     blockquote {
-        @extend .half-box;
+        // @extend .box;
+        // @extend .bottom;
         border-left: none;
         font-size: $size-3;
         padding: 1.5rem;

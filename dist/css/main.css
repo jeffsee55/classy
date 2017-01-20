@@ -410,13 +410,13 @@ table {
   -ms-user-select: none;
   user-select: none; }
 
-.box, .half-box, article.single blockquote {
+.box, .half-box {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   display: block;
   padding: 20px; }
-  .box:not(:last-child), .half-box:not(:last-child), article.single blockquote:not(:last-child) {
+  .box:not(:last-child), .half-box:not(:last-child) {
     margin-bottom: 20px; }
 
 a.box:hover, a.half-box:hover, a.box:focus, a.half-box:focus {
@@ -3967,7 +3967,7 @@ p {
   border-bottom: none; }
 
 section.section {
-  padding: 0 0 10rem; }
+  padding: 0 0 5rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "mostra-nuova", "Futura", sans-serif;
@@ -4060,10 +4060,17 @@ header .nav {
   overflow-x: auto;
   white-space: nowrap; }
 
+.category-hero .box-wrapper {
+  background: #f5f5f5;
+  padding: 5rem 4rem;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.19); }
+
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  .hero.home-hero {
+    margin-bottom: 5rem; }
   .hero.overlay {
     position: relative; }
     .hero.overlay h1, .hero.overlay h2, .hero.overlay h3, .hero.overlay h4, .hero.overlay h5, .hero.overlay h6, .hero.overlay p, .hero.overlay a {
@@ -4143,7 +4150,7 @@ article.single {
 .contact-info.columns.is-gapless {
   margin-top: 5rem; }
 
-.box, .half-box, article.single blockquote {
+.box, .half-box {
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -4151,19 +4158,19 @@ article.single {
   padding: 3rem 1.5rem;
   position: relative;
   margin-bottom: 2rem; }
-  .box a, .half-box a, article.single blockquote a {
+  .box a, .half-box a {
     position: relative;
     z-index: 1000; }
-  .box.half:before, .half.half-box:before, article.single blockquote.half:before {
+  .box.half:before, .half.half-box:before {
     border-top: none;
     border-right: none; }
-  .box.bottom, .bottom.half-box, article.single blockquote.bottom {
+  .box.bottom, .bottom.half-box {
     padding: 0 0 1rem 0; }
-    .box.bottom:before, .bottom.half-box:before, article.single blockquote.bottom:before {
+    .box.bottom:before, .bottom.half-box:before {
       border-top: none;
       border-right: none;
       border-left: none; }
-  .box:before, .half-box:before, article.single blockquote:before {
+  .box:before, .half-box:before {
     content: "";
     border: 3px solid transparent;
     border-image: linear-gradient(to right, #C79A43 0%, #453519 100%);
@@ -4174,7 +4181,7 @@ article.single {
     bottom: 0;
     left: 0; }
 
-.half-box:before, article.single blockquote:before {
+.half-box:before {
   border-top: none;
   border-right: none; }
 
@@ -4238,7 +4245,7 @@ article.single {
       padding-right: 0rem; }
       .preview.text-left label.category, .preview.text-left date {
         right: -4rem; }
-      .preview.text-left .box:before, .preview.text-left .half-box:before, .preview.text-left article.single blockquote:before, article.single .preview.text-left blockquote:before {
+      .preview.text-left .box:before, .preview.text-left .half-box:before {
         right: -4rem; }
       .preview.text-left p {
         text-align: justify; }
@@ -4247,7 +4254,7 @@ article.single {
       padding-right: 0rem; }
       .preview.text-right label.category, .preview.text-right date {
         left: -4rem; }
-      .preview.text-right .box:before, .preview.text-right .half-box:before, .preview.text-right article.single blockquote:before, article.single .preview.text-right blockquote:before {
+      .preview.text-right .box:before, .preview.text-right .half-box:before {
         left: -4rem; }
       .preview.text-right p {
         text-align: justify; } }
