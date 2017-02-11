@@ -1,0 +1,8 @@
+<svg id="frame_svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M10 10 h80 v80 h-80 z"
+        fill="none"
+        stroke="#333333"
+        stroke-width="10"
+        vector-effect="non-scaling-stroke">
+    </path>
+</svg>

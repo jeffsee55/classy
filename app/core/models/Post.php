@@ -357,7 +357,7 @@ class Post extends Basis {
 	 * @return string
 	 */
 	public function get_preview_template($layout = 'text-left') {
-		$format = get_post_meta($this->ID, '_archive_layout', true);
+		$format = get_post_meta($this->ID, 'archive_layout', true);
 		if($format == 'wide')
 			return 'post.wide';
 
@@ -374,19 +374,28 @@ class Post extends Basis {
 	}
 
 	public function title_position() {
-		$position = get_post_meta($this->ID, '_title_position', true);
+		$position = get_post_meta($this->ID, 'text_align', true);
 		if(isset($position))
 			return 'is-' . $position;
 
 		return 'is-left';
 	}
 
-	public function maybe_overlay() {
-		$overlay = get_post_meta($this->ID, '_title_overlay', true);
-		if($overlay == 0)
-			return '';
+	public function background_position() {
+		$position = get_post_meta($this->ID, 'background_position', true);
+		return $position;
+		if(! is_null($position))
+			return $position;
 
-		return 'overlay';
+		return 'center';
+	}
+
+	public function maybe_overlay() {
+		$overlay = get_post_meta($this->ID, 'overlay', true);
+		if($overlay)
+			return 'overlay';
+
+		return '';
 	}
 
 	/**
@@ -472,7 +481,7 @@ class Post extends Basis {
 	 *
 	 * @return string            Post preview.
 	 */
-	public function get_preview( $len = 30, $force = false, $readmore = 'continue', $strip = true) {
+	public function get_preview( $len = 30, $force = false, $readmore = 'read', $strip = true) {
 		$text = '';
 		$trimmed = false;
 
@@ -497,7 +506,6 @@ class Post extends Basis {
 			}
 
 			$text = do_shortcode( $text );
-
 		}
 
 		if ( ! strlen( $text ) ) {
@@ -525,7 +533,7 @@ class Post extends Basis {
 			$last = $text[ strlen( $text ) - 1 ];
 
 			if ( '.' !== $last && $trimmed ) {
-				$text .= ' &hellip; ';
+				$text .= '<br>';
 			}
 
 			if ( ! $strip ) {
@@ -534,7 +542,7 @@ class Post extends Basis {
 					$text = substr( $text, 0, $last_p_tag );
 				}
 				if ( '.' !== $last && $trimmed ) {
-					$text .= ' &hellip; ';
+					$text .= '<br>';
 				}
 			}
 

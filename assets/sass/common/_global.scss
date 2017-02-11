@@ -1,0 +1,134 @@
+body {
+    font-family: $family-sans-serif;
+    font-size: $size-5;
+
+    // bulma doesn't drill down for its tag class
+    // so the body for tag archives gets this class added
+    &.tag {
+        height: initial;
+        align-items: initial;
+        background-color: initial;
+        border-radius: initial;
+        color: initial;
+        display: initial;
+        font-size: initial;
+        justify-content: initial;
+        line-height: initial;
+        padding-left: initial;
+        padding-right: initial;
+        vertical-align: initial;
+        white-space: initial;
+    }
+}
+
+@include from($tablet) {
+    .admin-bar {
+        main {
+            padding-top: $nav-height;
+        }
+
+        header .nav {
+            top: 32px;
+        }
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+main {
+    padding-top: $nav-height;
+}
+
+p {
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.content a:not(.button) {
+    border-bottom: none;
+
+    &:visited {
+        color: $dark;
+    }
+}
+
+section.section {
+    padding: 0 0 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $family-header;
+    font-weight: normal;
+
+    a {
+        font-family: $family-header;
+        color: $grey-dark;
+        font-weight: normal;
+    }
+}
+
+h1 {
+    font-size: $size-1;
+}
+
+h2 {
+    font-size: $size-2;
+}
+
+h3 {
+    font-size: $size-3;
+}
+
+h4 {
+    font-size: $size-4;
+}
+
+h5 {
+    font-size: $size-5;
+}
+
+.title {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.font-cursive {
+    font-family: $family-cursive;
+}
+
+.single-post .preview-only {
+    display: none;
+}
+
+.content span.credits {
+    letter-spacing: 3px;
+
+    a {
+        color: $dark
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    span.credits {
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.text-left {
+    figure {
+        order: 2
+    }
+}
+
+date {
+    text-decoration: none;
+    color: $grey-dark;
+    font-family: $family-cursive;
+}
+
+.is-visible {
+    visibility: visible !important;
+}
