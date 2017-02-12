@@ -4000,18 +4000,43 @@ h5 {
 
 .font-cursive {
   font-family: "MrsGlows", cursive; }
+  .font-cursive p {
+    font-size: 40px; }
+
+h1 .font-cursive {
+  font-size: 100px;
+  color: white; }
 
 .single-post .preview-only {
   display: none; }
 
-.content span.credits {
-  letter-spacing: 3px; }
-  .content span.credits a {
-    color: #363636; }
+ul.header-list {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+  ul.header-list li {
+    display: inline-block;
+    padding: 0 1rem;
+    border-right: 1px solid; }
+    ul.header-list li:last-child {
+      border-right: none; }
 
-h1 span.credits, h2 span.credits, h3 span.credits, h4 span.credits, h5 span.credits, h6 span.credits {
-  font-weight: 400;
-  text-transform: uppercase; }
+.content blockquote {
+  border-left: none;
+  padding: 2.5rem 2.5rem 1.5rem;
+  letter-spacing: 2px;
+  border-left: 5px solid #d2d2d2;
+  line-height: 2; }
+  .content blockquote.credits {
+    margin-top: 1rem;
+    border-left: none; }
+    .content blockquote.credits a {
+      color: #363636; }
+    .content blockquote.credits h1, .content blockquote.credits h2, .content blockquote.credits h3, .content blockquote.credits h4, .content blockquote.credits h5, .content blockquote.credits h6 {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-family: "mostra-nuova", "Futura", sans-serif; }
 
 .text-left figure {
   order: 2; }
@@ -4049,7 +4074,8 @@ header .nav {
           left: 0;
           right: 0; } }
       header .nav .nav-center aside.menu ul.menu-list li a {
-        padding: 1rem 2rem; }
+        padding: 1rem 2rem;
+        text-transform: uppercase; }
     header .nav .nav-center .custom-logo-link {
       padding: 1rem 1.3rem; }
       @media screen and (max-width: 768px) {
@@ -4125,17 +4151,6 @@ article.single {
     article.single {
       margin-left: 1rem;
       margin-right: 1rem; } }
-  article.single blockquote {
-    border-left: none;
-    font-size: 28px;
-    padding: 1.5rem; }
-    article.single blockquote p:last-child {
-      display: block;
-      font-family: 'MrsGlows';
-      font-size: 55px;
-      text-align: right;
-      margin-bottom: 0;
-      line-height: 1; }
 
 .nav-item.label {
   padding-left: 0;

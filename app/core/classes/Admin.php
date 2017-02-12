@@ -18,7 +18,6 @@ class Admin {
 	 * Admin constructor.
 	 */
 	public function __construct() {
-        add_action( 'save_post',        [$this, 'saveMeta']);
 		add_filter( 'mce_buttons_2', 	[$this, 'addFormats']);
 		add_filter( 'tiny_mce_before_init', [$this, 'my_mce_before_init_insert_formats']);
     }
@@ -34,22 +33,25 @@ class Admin {
 		$style_formats = array(
 			array(
 				'title' => 'Preview Only',
-				'inline' => 'span',
-				'block' => 'div',
+				'block' => 'blockquote',
 				'classes' => 'preview-only',
 				'wrapper' => true,
 			),
 			array(
+				'title' => 'Header List',
+				'block' => 'ul',
+				'classes' => 'header-list',
+				'wrapper' => true,
+			),
+			array(
 				'title' => 'Credits',
-				'inline' => 'span',
-				'block' => 'div',
+				'block' => 'blockquote',
 				'classes' => 'credits',
 				'wrapper' => true,
 			),
 			array(
 				'title' => 'Cursive',
-				'inline' => 'span',
-				'block' => 'div',
+				'block' => 'blockquote',
 				'classes' => 'font-cursive',
 				'wrapper' => true,
 			),

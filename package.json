@@ -13,4 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2"
   },
+  "dependencies": {
+    "scrollreveal": "^3.3.2"
+  }
 }

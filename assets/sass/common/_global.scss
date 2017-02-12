@@ -96,24 +96,58 @@ h5 {
 
 .font-cursive {
     font-family: $family-cursive;
+
+    p {
+        font-size: $size-2;
+    }
+}
+
+h1 .font-cursive {
+    font-size: 100px;
+    color: white;
 }
 
 .single-post .preview-only {
     display: none;
 }
 
-.content span.credits {
-    letter-spacing: 3px;
+ul.header-list {
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 1.5rem;
 
-    a {
-        color: $dark
+    li {
+        display: inline-block;
+        padding: 0 1rem;
+        border-right: 1px solid;
+
+        &:last-child {
+            border-right: none;
+        }
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    span.credits {
-        font-weight: 400;
-        text-transform: uppercase;
+.content blockquote {
+    border-left: none;
+    padding: 2.5rem 2.5rem 1.5rem;
+    letter-spacing: 2px;
+    border-left: 5px solid #d2d2d2;
+    line-height: 2;
+
+    &.credits {
+        margin-top: 1rem;
+        border-left: none;
+
+        a {
+            color: $dark
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: $family-header;
+        }
     }
 }
 

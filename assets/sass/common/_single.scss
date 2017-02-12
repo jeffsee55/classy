@@ -68,23 +68,6 @@ article.single  {
         margin-left: 1rem;
         margin-right: 1rem;
     }
-
-    blockquote {
-        // @extend .box;
-        // @extend .bottom;
-        border-left: none;
-        font-size: $size-3;
-        padding: 1.5rem;
-
-        p:last-child {
-            display: block;
-            font-family: 'MrsGlows';
-            font-size: 55px;
-            text-align: right;
-            margin-bottom: 0;
-            line-height: 1;
-        }
-    }
 }
 
 .nav-item {
