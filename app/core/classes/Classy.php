@@ -62,7 +62,7 @@ class Classy {
 
 		add_filter( 'theme_page_templates', array( $this, 'filter_templates' ) );
 
-		add_action('admin_init', [$this, 'init_admin']);
+		add_action('init', [$this, 'init_admin']);
 	}
 
 	/**

@@ -58,8 +58,15 @@ jQuery(document).ready(function($){
     	}
     });
 
-	$('header .nav-item').hover(function() {
-		console.log('show');
-		$(this).find('aside.menu').toggleClass('is-visible');
+	$('header .nav-item > a').click(function(e) {
+		if($(this).parent('.nav-item').find('aside.menu').hasClass('is-visible')) {
+			e.preventDefault();
+			$(this).find('aside.menu').removeClass('is-visible');
+			$(this).parents('.nav-center').find('aside.menu').removeClass('is-visible');
+		} else if ($(this).parent('.nav-item').find('aside.menu').length) {
+			e.preventDefault();
+			$(this).parents('.nav-center').find('aside.menu').removeClass('is-visible');
+			$(this).parent('.nav-item').find('aside.menu').addClass('is-visible');
+		}
 	});
 });

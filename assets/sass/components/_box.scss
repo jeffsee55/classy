@@ -3,17 +3,17 @@
     border-radius: 0;
     box-shadow: none;
     display: block;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     position: relative;
     margin-bottom: 4rem;
 
     @include from($tablet) {
-        padding: 3rem 4rem;
+        padding: 3rem 5rem;
         margin-bottom: 0;
     }
 
     @include from($desktop) {
-        padding: 3rem 2.5rem;
+        padding: 3rem 4rem;
         margin-bottom: 4rem;
     }
 
@@ -32,9 +32,9 @@
     &.bottom {
         padding: 0 0 1rem 0;
         &:before {
-            border-top: none;
-            border-right: none;
-            border-left: none;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
         }
     }
 

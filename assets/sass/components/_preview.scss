@@ -4,6 +4,13 @@
     margin-left: auto;
     margin-right: auto;
 
+    figure {
+
+        img {
+            box-shadow: $box-shadow;
+        }
+    }
+
     .preview-excerpt {
         display: block;
         max-width: 300px;
@@ -154,5 +161,4 @@
     @include from($tablet) {
         max-height: 500px;
     }
-
 }

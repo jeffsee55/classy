@@ -21,17 +21,27 @@ header {
                 visibility: hidden;
                 top: 100%;
                 background: white;
+                min-width: 200px;
+                box-shadow: 1px 7px 9px 0px rgba(0, 0, 0, 0.19);
 
                 @include until($tablet) {
                     left: 0;
                     right: 0;
+                    width: 100%;
+                }
+
+                @include from($tablet) {
+                    left: 50%;
+                    transform: translateX(-50%)
                 }
 
                 ul.menu-list {
+
                     li {
                         a {
                             padding: 1rem 2rem;
                             text-transform: uppercase;
+                            text-align: center;
                         }
                     }
                 }
@@ -44,14 +54,28 @@ header {
                     position: absolute;
                     width: 150px;
                     padding: 1rem 0;
+                    left: 50%;
+                    transform: translateX(-50%)
                 }
             }
 
             .nav-item {
+
+                & > a {
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    align-items: center;
+                }
+
                 @include until($tablet) {
                     margin-top: 3rem;
                     padding: 0.75rem 0.5rem 0.75rem;
                     font-size: $size-6;
+                }
+
+                @include from($tablet) {
+                    position: relative;
                 }
             }
         }

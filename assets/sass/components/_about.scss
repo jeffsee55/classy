@@ -4,9 +4,10 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
+        background-size: cover;
 
-        img {
-            max-width: none;
+        @include until($tablet) {
+            height: 400px;
         }
     }
 
@@ -28,4 +29,9 @@
 
 .contact-info.columns.is-gapless {
     margin-top: 5rem;
+
+    @include until($tablet) {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+    }
 }

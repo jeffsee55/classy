@@ -2,8 +2,8 @@ jQuery(document).ready(function($){
     window.sr = ScrollReveal();
 
     sr.reveal('.line-reveal h1', {
-        distance: '50px',
-        duration: 400,
+        distance: '30px',
+        duration: 500,
         delay: 300,
         scale: 1,
         easing: 'ease-in-out'
@@ -11,14 +11,16 @@ jQuery(document).ready(function($){
 
     sr.reveal('.line-reveal p', {
         distance: '-10px',
-        duration: 300,
+        duration: 500,
         delay: 500,
         scale: 1,
         easing: 'ease-in-out'
     });
 
-    new Vivus('box-line', {
-        duration: 50,
-        animTimingFunction: Vivus.EASE_OUT
+    var line = new Vivus('box-line', {
+        animTimingFunction: Vivus.EASE_OUT,
+        duration: 100
     });
+    console.table(line.map);
+
 });

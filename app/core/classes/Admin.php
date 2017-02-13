@@ -20,7 +20,23 @@ class Admin {
 	public function __construct() {
 		add_filter( 'mce_buttons_2', 	[$this, 'addFormats']);
 		add_filter( 'tiny_mce_before_init', [$this, 'my_mce_before_init_insert_formats']);
+		add_action( 'wp_loaded', [$this, 'addOptionsPage'] );
     }
+
+	public function addOptionsPage()
+	{
+		if( function_exists('acf_add_options_page') ) {
+
+			$option_page = acf_add_options_page(array(
+				'page_title' 	=> 'Site Options',
+				'menu_title' 	=> 'Site Options',
+				'menu_slug' 	=> 'theme-general-settings',
+				'capability' 	=> 'edit_posts',
+				'redirect' 	=> false
+			));
+
+		}
+	}
 
 	public function addFormats($buttons)
 	{
