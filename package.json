@@ -11,9 +11,12 @@
   "devDependencies": {
     "bulma": "^0.2.3",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.1",
+    "pump": "^1.0.2"
   },
   "dependencies": {
+    "parallax.js": "^0.1.0",
     "scrollreveal": "^3.3.2"
   }
 }

@@ -6,13 +6,11 @@
 @section('content')
 
     <section class="home-hero hero is-large {{ $post->maybe_overlay() }}" style="background-image: url({{ $post->thumbnail()->src('wide') }})">
-    	<div class="hero-body">
-    		<div class="container {{ $post->title_position() }}">
-    			<div class="column is-half">
-					{{ $post->content() }}
-    			</div>
-    		</div>
-    	</div>
+		<div class="container {{ $post->title_position() }}">
+			<div class="column is-half">
+				{{ $post->content() }}
+			</div>
+		</div>
     </section>
 
 	@if (isset($posts))

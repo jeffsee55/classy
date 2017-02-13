@@ -1,0 +1,17 @@
+.category-hero {
+    .box {
+        margin-bottom: 3rem;
+
+        h1 {
+            text-align: center;
+            font-size: 120px;
+            font-family: $family-cursive;
+        }
+    }
+
+    .category-description {
+        margin: 0 auto;
+        text-align: justify;
+        max-width: 600px;
+    }
+}

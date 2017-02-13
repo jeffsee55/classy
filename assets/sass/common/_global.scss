@@ -55,7 +55,7 @@ p {
 }
 
 section.section {
-    padding: 0 0 5rem;
+    padding: 0 0 10rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -103,8 +103,12 @@ h5 {
 }
 
 h1 .font-cursive {
-    font-size: 100px;
     color: white;
+    font-size: 75px;
+
+    @include from($tablet) {
+        font-size: 100px;
+    }
 }
 
 .single-post .preview-only {

@@ -3969,7 +3969,7 @@ p {
     color: #363636; }
 
 section.section {
-  padding: 0 0 5rem; }
+  padding: 0 0 10rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "mostra-nuova", "Futura", sans-serif;
@@ -4004,8 +4004,11 @@ h5 {
     font-size: 40px; }
 
 h1 .font-cursive {
-  font-size: 100px;
-  color: white; }
+  color: white;
+  font-size: 75px; }
+  @media screen and (min-width: 769px) {
+    h1 .font-cursive {
+      font-size: 100px; } }
 
 .single-post .preview-only {
   display: none; }
@@ -4085,7 +4088,8 @@ header .nav {
         text-transform: uppercase;
         text-align: center; }
     header .nav .nav-center .custom-logo-link {
-      padding: 1rem 1.3rem; }
+      padding: 1.3rem 1.3rem 1rem;
+      max-width: 375px; }
       @media screen and (max-width: 768px) {
         header .nav .nav-center .custom-logo-link {
           position: absolute;
@@ -4249,6 +4253,18 @@ article.single {
   border-top: none;
   border-right: none; }
 
+.category-hero .box, .category-hero .half-box {
+  margin-bottom: 3rem; }
+  .category-hero .box h1, .category-hero .half-box h1 {
+    text-align: center;
+    font-size: 120px;
+    font-family: "MrsGlows", cursive; }
+
+.category-hero .category-description {
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 600px; }
+
 .bg-stone {
   background: #ABC1BD !important; }
 
@@ -4277,6 +4293,11 @@ article.single {
   font-family: 'MrsGlows';
   src: url("../fonts/MrsGlows.otf") format("otf");
   font-style: normal; }
+
+.home-hero .container {
+  height: 100%;
+  display: flex;
+  align-items: center; }
 
 .preview {
   text-align: center;

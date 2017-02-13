@@ -48,7 +48,8 @@ header {
             }
 
             .custom-logo-link {
-                padding: 1rem 1.3rem;
+                padding: 1.3rem 1.3rem 1rem;
+                max-width: 375px;
 
                 @include until($tablet) {
                     position: absolute;

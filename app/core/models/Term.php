@@ -39,6 +39,10 @@ class Term extends Basis {
 
     public function description()
     {
+        $description = get_field('term_description', 'category_' . $this->term_id);
+        if($description)
+            return $description;
+
         return $this->description;
     }
 }

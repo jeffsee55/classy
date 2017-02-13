@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){if(e(".home-hero").length){var h=e(window).height(),n=e("nav.nav").height(),o=h-n;e(".home-hero").css("height",o+"px")}});

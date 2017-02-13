@@ -17,10 +17,10 @@ jQuery(document).ready(function($){
         easing: 'ease-in-out'
     });
 
-    var line = new Vivus('box-line', {
-        animTimingFunction: Vivus.EASE_OUT,
-        duration: 100
-    });
-    console.table(line.map);
+    // var line = new Vivus('box-line', {
+    //     animTimingFunction: Vivus.EASE_OUT,
+    //     duration: 100
+    // });
+    // console.table(line.map);
 
 });

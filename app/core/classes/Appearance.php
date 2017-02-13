@@ -52,11 +52,11 @@ class Appearance {
 
 			wp_enqueue_script( 'scrollreveal_script', "https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js", array( 'jquery' ), CLASSY_THEME_VERSION, true );
 			wp_enqueue_script( 'svg_script', "//cdn.jsdelivr.net/vivus/latest/vivus.min.js", array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'assets/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'header_script', CLASSY_THEME_DIR . 'assets/js/header.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'home_script', CLASSY_THEME_DIR . 'assets/js/home.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'animation_script', CLASSY_THEME_DIR . 'assets/js/animation.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'media_script', CLASSY_THEME_DIR . 'assets/js/media.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'dist/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'header_script', CLASSY_THEME_DIR . 'dist/js/header.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'home_script', CLASSY_THEME_DIR . 'dist/js/home.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'animation_script', CLASSY_THEME_DIR . 'dist/js/animation.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'media_script', CLASSY_THEME_DIR . 'dist/js/media.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 
 		}
 
