@@ -122,8 +122,6 @@ class Appearance {
 			'caption',
 		));
 
-		add_image_size('wide', 1500, 700, TRUE);
-
 		add_theme_support( 'custom-logo', array(
 		    'height'      => 100,
 		    'width'       => 400,
@@ -131,5 +129,9 @@ class Appearance {
 		    'flex-width'  => true,
 		    'header-text' => array( 'Heid & Seek', 'FOOD, FITNESS, FASHION, FELINES' ),
 		) );
+
+		add_image_size('wide', 1500, 700, TRUE);
+
+		add_image_size('hero', 2000, 1000, ['center', 'bottom']);
 	}
 }

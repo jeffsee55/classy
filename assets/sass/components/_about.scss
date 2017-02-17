@@ -1,10 +1,12 @@
-.page-layout {
+.page-layout.about-page {
+    margin-bottom: 5rem;
 
     figure {
         overflow: hidden;
         display: flex;
         justify-content: center;
         background-size: cover;
+        box-shadow: $box-shadow;
 
         @include until($tablet) {
             height: 400px;
@@ -19,6 +21,14 @@
             p {
                 text-align: justify;
             }
+        }
+        @include from($tablet) {
+            position: relative;
+            left: -2rem;
+            bottom: -3rem;
+            background: white;
+            margin-bottom: 1rem;
+            padding: 7rem;
         }
 
         .title {

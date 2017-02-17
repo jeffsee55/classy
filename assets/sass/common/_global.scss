@@ -96,6 +96,9 @@ h5 {
 
 .font-cursive {
     font-family: $family-cursive;
+    h1, h2, h3, h4, h5, p, a {
+        font-family: $family-cursive;
+    }
 
     p {
         font-size: $size-2;
@@ -107,7 +110,7 @@ h1 .font-cursive {
     font-size: 75px;
 
     @include from($tablet) {
-        font-size: 100px;
+        font-size: 150px;
     }
 }
 

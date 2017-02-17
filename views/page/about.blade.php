@@ -5,14 +5,15 @@
 
 @section('content')
 	@if ($post)
-		<div class="page-layout columns is-gapless">
+		<div class="page-layout about-page columns is-gapless">
 			<figure class="column is-half" style="background-position: {{ $post->background_position() }}; background-image: url({{ $post->thumbnail()->src('large') }})">
 			</figure>
 			<div class="column is-half">
-				<article class="page">
-					<div class="box bottom">
+				<article class="box page">
+					<div class="">
 						<h1 class="title">{{ $post->title() }}</h1>
 					</div>
+					<hr>
 
 					<section class="body">
 						{{ $post->content() }}
@@ -48,4 +49,5 @@
 			@endif
 		</div>
 	@endif
+	@include ('instagram')
 @stop

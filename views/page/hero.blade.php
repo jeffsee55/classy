@@ -5,7 +5,9 @@
 
 @section('content')
 
-    <section class="home-hero hero is-large {{ $post->maybe_overlay() }}" style="background-image: url({{ $post->thumbnail()->src('wide') }})">
+    <section
+    class="home-hero hero is-large {{ $post->maybe_overlay() }}"
+    style="background-image: url({{ $post->thumbnail()->src('original') }})">
 		<div class="container {{ $post->title_position() }}">
 			<div class="column is-half">
 				{{ $post->content() }}
