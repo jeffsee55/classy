@@ -3932,6 +3932,17 @@ footer {
 body {
   font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
   font-size: 18px; }
+  body:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: white;
+    z-index: 9999; }
+  body.loaded:after {
+    content: none; }
   body.tag {
     height: initial;
     align-items: initial;
@@ -4198,10 +4209,14 @@ article.single {
       .page-layout.about-page figure {
         height: 400px; } }
   .page-layout.about-page article.page {
-    padding: 3rem 2rem; }
+    padding: 3rem 2rem;
+    position: relative;
+    background: white; }
     @media screen and (max-width: 768px) {
       .page-layout.about-page article.page {
-        padding: 3rem 1rem; }
+        margin: 0 0.7rem;
+        padding: 3rem 2rem;
+        bottom: 3rem; }
         .page-layout.about-page article.page p {
           text-align: justify; } }
     @media screen and (min-width: 769px) {
@@ -4209,7 +4224,6 @@ article.single {
         position: relative;
         left: -2rem;
         bottom: -3rem;
-        background: white;
         margin-bottom: 1rem;
         padding: 7rem; } }
     .page-layout.about-page article.page .title {

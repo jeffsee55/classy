@@ -15,8 +15,13 @@
 
     article.page {
         padding: 3rem 2rem;
+        position: relative;
+        background: white;
+
         @include until($tablet) {
-            padding: 3rem 1rem;
+            margin: 0 0.7rem;
+            padding: 3rem 2rem;
+            bottom: 3rem;
 
             p {
                 text-align: justify;
@@ -26,7 +31,6 @@
             position: relative;
             left: -2rem;
             bottom: -3rem;
-            background: white;
             margin-bottom: 1rem;
             padding: 7rem;
         }

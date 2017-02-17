@@ -1,6 +1,9 @@
 jQuery(document).ready(function($){
     window.sr = ScrollReveal();
 
+    console.log('loaded');
+    $('body').addClass('loaded');
+
     sr.reveal('.line-reveal h1', {
         distance: '30px',
         duration: 500,
