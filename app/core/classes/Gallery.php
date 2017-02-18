@@ -11,19 +11,26 @@ class Gallery
     {
 		$return = $output; // fallback
 
-		$query_images_args = array(
-		    'post_type'      => 'attachment',
-		    'post_mime_type' => 'image',
-			'post__in' 		 => explode(',', $atts['ids']),
-		    'post_status'    => 'inherit',
-		    'posts_per_page' => -1,
-		);
-		$query_images = new \WP_Query( $query_images_args );
+		// $query_images_args = array(
+		//     'post_type'      => 'attachment',
+		//     'post_mime_type' => 'image',
+		// 	'post__in' 		 => explode(',', $atts['ids']),
+		//     'post_status'    => 'inherit',
+		//     'posts_per_page' => -1,
+		// );
+		// $query_images = new \WP_Query( $query_images_args );
+        //
+		// $images = array();
+		// // foreach ( $query_images->posts as $image ) {
+		// // 	$images[] = wp_get_attachment_image_src($image->ID, $atts['size']);
+		// // }
 
-		$images = array();
-		foreach ( $query_images->posts as $image ) {
-			$images[] = wp_get_attachment_image_src($image->ID, $atts['size']);
-		}
+        $images = [];
+        foreach(explode(',', $atts['ids']) as $id)
+        {
+            $images[] = wp_get_attachment_image_src($id, $atts['size']);
+        }
+
         // 1 and 2 columns show up but 3 columns does not
         $this->columns = isset($atts['columns']) ? $atts['columns'] : '3';
         $this->images = $images;
