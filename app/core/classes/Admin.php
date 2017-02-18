@@ -21,6 +21,7 @@ class Admin {
 		add_filter( 'mce_buttons_2', 	[$this, 'addFormats']);
 		add_filter( 'tiny_mce_before_init', [$this, 'my_mce_before_init_insert_formats']);
 		add_action( 'wp_loaded', [$this, 'addOptionsPage'] );
+		add_action( 'wp_loaded', [$this, 'addPiecesTaxonomy'] );
     }
 
 	public function addOptionsPage()
@@ -77,5 +78,10 @@ class Admin {
 
 		return $init_array;
 
+	}
+
+	function addPiecesTaxonomy()
+	{
+		Taxonomy::add('piece', 'post', [], 'Peice', 'Peices');
 	}
 }

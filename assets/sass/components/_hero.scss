@@ -11,7 +11,9 @@
         align-items: center;
 
         h1 {
-            font-size: 130px;
+            color: white;
+            font-size: 150px;
+            line-height: 1
         }
     }
 }
@@ -19,7 +21,7 @@
 .hero.is-medium {
     &.single-hero {
         .box {
-            margin: 7rem 0;
+            margin: 7rem 2rem;
         }
     }
 

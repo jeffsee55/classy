@@ -3,20 +3,12 @@
  * Data that will be accessible on front page.
  */
 $framework = get_theme_framework();
+$post = $framework::get_post();
 
-$categories = [
-	'fashion',
-	'food',
-	'fitness',
-	'feline'
-];
-
-$category_ids = array_map(function($slug) {
-	return get_term_by('slug', $slug, 'category', OBJECT)->term_id;
-}, $categories);
+$category_ids = get_field('categories', $post->ID);
 
 $data = [
-	'post' => $framework::get_post(),
+	'post' => $post,
 	'posts' => $framework::get_posts([
         'post_type' => 'post',
         'post_count' => get_option('posts_per_page'),

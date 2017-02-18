@@ -20,7 +20,7 @@
             max-width: 600px;
             margin: 0 auto;
 
-            @include until($tablet) {
+            & > * {
                 margin: 0 1rem;
             }
         }
