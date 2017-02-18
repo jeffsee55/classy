@@ -1,149 +1,143 @@
 .preview {
-
     text-align: center;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 
+    &.text-right {
+        .image-column {
+            order: 1;
+        }
+        .text-column {
+            order: 2;
+        }
+    }
+
+    &.text-left {
+        .image-column {
+            order: 2;
+
+            figure {
+                float: right;
+            }
+        }
+        .text-column {
+            order: 1;
+        }
+    }
+
     figure {
         position: relative;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #F1F1F1;
+        height: 300px;
+        width: 100%;
 
         @include from($tablet) {
             top: -3rem;
-        }
-
-        img {
-            // box-shadow: $box-shadow;
-            border: 1px solid #f1f1f1;
-        }
-    }
-
-    .preview-excerpt {
-        display: block;
-        max-width: 300px;
-        margin: 0 auto;
-        text-align: justify;
-
-        @include from($tablet) {
-            display: none;
+            height: 400px;
+            width: 120%;
+            border-radius: 5px;
+            margin-left: 3rem;
+            margin-right: 3rem;
+            z-index: 1;
         }
 
         @include from($desktop) {
-            display: block;
-        }
-
-        blockquote {
-            border-left: 2px solid $grey-lighter;
-            padding-left: 1rem;
-
-            em,
-            cite,
-            p:last-child {
-                display: block;
-                font-family: 'MrsGlows';
-                font-size: $size-3;
-                text-align: right;
-                margin-bottom: 0;
-                line-height: 1;
-            }
+            width: 110%;
         }
     }
 
-    .text-wrapper {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
-    @include from($tablet) {
-        &.text-left {
-            padding-left: 0rem;
-            padding-right: 0rem;
-
-            .text-wrapper {
-                position: relative;
-                right: -5rem;
-            }
-
-            p {
-                text-align: justify;
-            }
-        }
-        &.text-right {
-            padding-left: 0rem;
-            padding-right: 0rem;
-
-            .text-wrapper {
-                position: relative;
-                left: -5rem;
-            }
-
-            p {
-                text-align: justify;
-            }
-        }
-    }
-
-    .read-more {
-        text-align: center;
-        display: block;
-        margin-top: 1rem;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-    }
-}
-
-.preview-text {
-    position: relative;
-
-    @include until($tablet) {
-        top: -4rem;
-
-        h1 {
-            text-align: center;
-        }
-    }
-    @include from($tablet) {
-        padding: 3rem 2rem 3rem 0;
+    .preview-text {
+        position: relative;
+        margin: 0 4rem;
+        z-index: 10;
 
         &.wide-layout {
-            top: -9rem;
+            margin: 0 auto;
         }
-    }
-
-    label.category {
-        background: $primary;
-        padding: 0.5rem 1rem;
-        color: white;
-        position: absolute;
-        top: -1.1rem;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        width: 175px;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .title {
-        margin-top: 20px;
-        font-size: $size-1;
 
         @include until($tablet) {
-            font-size: $mobile-size-1;
-        }
-    }
+            top: -4rem;
 
-    date {
-        position: absolute;
-        bottom: -1.5rem;
-        font-size: 35px;
-        background: white;
-        padding: 0 0.5rem;
-        left: 0;
-        right: 0;
-        width: 120px;
-        margin: auto;
-        text-align: center;
+            h1 {
+                text-align: center;
+            }
+        }
+
+        @include from($tablet) {
+            padding: 3rem 0;
+
+            &.wide-layout {
+                top: -9rem;
+            }
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        label.category {
+            background: $primary;
+            padding: 0.5rem 1rem;
+            color: white;
+            position: absolute;
+            top: -1.1rem;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            width: 175px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .title {
+            margin-top: 20px;
+            font-size: $size-1;
+
+            @include until($tablet) {
+                font-size: $mobile-size-1;
+            }
+        }
+
+        date {
+            position: absolute;
+            bottom: -1.5rem;
+            font-size: 35px;
+            background: white;
+            padding: 0 0.5rem;
+            left: 0;
+            right: 0;
+            width: 120px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .preview-excerpt {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: justify;
+
+            @include from($tablet) {
+                display: none;
+            }
+
+            @include from($desktop) {
+                display: block;
+                max-width: 300px;
+            }
+        }
+
+        .read-more {
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -154,10 +148,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        img {
-            max-width: $tablet;
-        }
     }
 
     @include from($tablet) {
