@@ -5,33 +5,42 @@
 
 @section('content')
 	@if ($post)
-		<div class="page-layout about-page">
-			<div class="container">
-				<div class="columns is-gapless">
-					<figure class="column is-half">
-						<div style="background-position: {{ $post->background_position() }}; background-image: url({{ $post->thumbnail()->src('large') }})"></div>
+		<section class="spacer short">
+		</section>
+		<section class="section preview {{ $post->get_layout() }}">
+			<article class="columns is-gapless">
+				<div class="image-column column is-5">
+					<figure style="background-image: url({{ $post->thumbnail()->src('large') }})">
+						<a href="{{ $post->get_permalink() }}">
+						</a>
 					</figure>
-					<div class="column is-half">
-						<article class="page">
+				</div>
+				<div class="text-column column is-7">
+					<div class="preview-text">
+						<div class="text-wrapper">
 							<div class="box">
-								<h1 class="title">{{ $post->title() }}</h1>
-								<hr>
-								<section class="body">
-									{{ $post->content() }}
-								</section>
+								@if ($post->get_category())
+									<label class="category {{ $post->get_category_color() }}">{{ $post->get_category() }}</label>
+								@endif
+								<h1 class="title is-large">{{ $post->title() }}</h1>
 							</div>
-						</article>
+							<div class="columns">
+								<div class="column is-offset-2 is-8">
+									{{ $post->get_content() }}
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="columns level is-gapless contact-info">
+			</article>
+		</section>
+		<section class="spacer columns level is-gapless contact-info">
 			@if( have_rows('contact_box') )
 			    @while ( have_rows('contact_box') )
 					<?php the_row(); ?>
-	    			<div class="column is-half is-level">
+	    			<div class="column is-half">
 	            		<div class="columns">
-	            			<div class="column is-10 is-offset-1">
+	            			<div class="column is-12">
 	                            <h4 class="has-text-centered">{{ the_sub_field('text') }}</h4>
 	                            <p class="has-text-centered">
 	                                <a href="mailto: {{ the_sub_field('email') }}">{{ the_sub_field('email') }}</a>
@@ -51,7 +60,7 @@
 					</div>
 			    @endwhile
 			@endif
-		</div>
+		</section>
 	@endif
 	@include ('instagram')
 @stop

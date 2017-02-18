@@ -17,8 +17,10 @@
         .image-column {
             order: 2;
 
-            figure {
-                float: right;
+            @include from($tablet) {
+                figure {
+                    float: right;
+                }
             }
         }
         .text-column {
@@ -59,7 +61,7 @@
         }
 
         @include until($tablet) {
-            top: -4rem;
+            top: -3rem;
 
             h1 {
                 text-align: center;
@@ -94,8 +96,8 @@
         }
 
         .title {
-            margin-top: 20px;
             font-size: $size-1;
+            margin-bottom: 0;
 
             @include until($tablet) {
                 font-size: $mobile-size-1;

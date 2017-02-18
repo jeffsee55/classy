@@ -3,17 +3,7 @@
 	@include ($post->get_preview_template($layout))
 	<?php $layout = $post->get_layout(); ?>
 	@if($index == 1)
-		<section class="spacer callout">
-			<div>
-				<div class="callout-text">
-					{{ the_field('subscribe_text', 'option') }}
-				</div>
-				<div class="control has-addons has-addons-fullwidth">
-					<input class="input" type="text" placeholder="Email">
-					<input class="button is-primary" type="submit" value="submit">
-				</div>
-			</div>
-		</section>
+		@include ('layout.subscribe')
 	@else
 		<section class="spacer">
 		</section>

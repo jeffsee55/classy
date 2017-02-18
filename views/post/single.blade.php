@@ -3,9 +3,9 @@
 @section('content')
 	@if ($post)
 		@include ('post.partials.hero')
+		@include ('post.partials.social')
 		<article class="single">
 			<section class="body content">
-				@include ('post.partials.social')
 				{{ $post->content() }}
 			</section>
 
@@ -20,4 +20,5 @@
 			{{ comments_template() }}
 		</article>
 	@endif
+	@include ('layout.subscribe')
 @stop
