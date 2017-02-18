@@ -5,20 +5,24 @@
 
 @section('content')
 	@if ($post)
-		<div class="page-layout about-page columns is-gapless">
-			<figure class="column is-half" style="background-position: {{ $post->background_position() }}; background-image: url({{ $post->thumbnail()->src('large') }})">
-			</figure>
-			<div class="column is-half">
-				<article class="box page">
-					<div class="">
-						<h1 class="title">{{ $post->title() }}</h1>
+		<div class="page-layout about-page">
+			<div class="container">
+				<div class="columns is-gapless">
+					<figure class="column is-half">
+						<div style="background-position: {{ $post->background_position() }}; background-image: url({{ $post->thumbnail()->src('large') }})"></div>
+					</figure>
+					<div class="column is-half">
+						<article class="page">
+							<div class="box">
+								<h1 class="title">{{ $post->title() }}</h1>
+								<hr>
+								<section class="body">
+									{{ $post->content() }}
+								</section>
+							</div>
+						</article>
 					</div>
-					<hr>
-
-					<section class="body">
-						{{ $post->content() }}
-					</section>
-				</article>
+				</div>
 			</div>
 		</div>
 		<div class="columns level is-gapless contact-info">
@@ -27,7 +31,7 @@
 					<?php the_row(); ?>
 	    			<div class="column is-half is-level">
 	            		<div class="columns">
-	            			<div class="column is-10 is-offset-1 box">
+	            			<div class="column is-10 is-offset-1">
 	                            <h4 class="has-text-centered">{{ the_sub_field('text') }}</h4>
 	                            <p class="has-text-centered">
 	                                <a href="mailto: {{ the_sub_field('email') }}">{{ the_sub_field('email') }}</a>

@@ -2,22 +2,6 @@ body {
     font-family: $family-sans-serif;
     font-size: $size-5;
 
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        background: white;
-        z-index: 9999;
-    }
-
-    &.loaded {
-        &:after {
-            content: none;
-        }
-    }
 
     // bulma doesn't drill down for its tag class
     // so the body for tag archives gets this class added
@@ -56,6 +40,10 @@ body {
 
 main {
     padding-top: $nav-height;
+}
+
+.container {
+    margin: auto;
 }
 
 p {
@@ -137,14 +125,16 @@ h1 .font-cursive {
 
 ul.header-list {
     padding-left: 0;
+    display: flex;
     list-style: none;
     text-align: center;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
     li {
-        display: inline-block;
         padding: 0 1rem;
-        border-right: 1px solid;
+        // border-right: 1px solid;
 
         &:last-child {
             border-right: none;

@@ -40,7 +40,7 @@
 
     &:before {
         content: "";
-        border: 3px solid transparent;
+        border: 2px solid transparent;
         border-image: linear-gradient(to right, #C79A43 0%, #453519 100%);
         border-image-slice: 1;
         position: absolute;
