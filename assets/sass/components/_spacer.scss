@@ -1,0 +1,28 @@
+section.spacer {
+    background-image: $background-image;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.callout {
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    div {
+        margin: auto;
+        width: 300px;
+        text-align: center;
+
+        .callout-text {
+            margin-bottom: 1rem;
+            .font-cursive h1 {
+                font-size: 90px;
+                line-height: 1;
+            }
+        }
+    }
+}

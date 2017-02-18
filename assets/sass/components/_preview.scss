@@ -6,6 +6,11 @@
     margin-right: auto;
 
     figure {
+        position: relative;
+
+        @include from($tablet) {
+            top: -3rem;
+        }
 
         img {
             // box-shadow: $box-shadow;
@@ -90,22 +95,17 @@
     position: relative;
 
     @include until($tablet) {
-        top: -3rem;
-
-        &.wide-layout {
-            top: -4rem;
-        }
+        top: -4rem;
 
         h1 {
             text-align: center;
         }
     }
     @include from($tablet) {
-        padding-right: 2rem;
-        padding-left: 0rem;
+        padding: 3rem 2rem 3rem 0;
 
         &.wide-layout {
-            top: -4rem;
+            top: -9rem;
         }
     }
 

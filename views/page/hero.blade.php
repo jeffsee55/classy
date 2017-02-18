@@ -14,6 +14,8 @@
 			</div>
 		</div>
     </section>
+	<section class="spacer">
+	</section>
 
 	@if (isset($posts))
 		@include ('post.partials.list')

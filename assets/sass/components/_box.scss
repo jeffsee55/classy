@@ -51,13 +51,3 @@
     }
 
 }
-
-
-
-.half-box {
-    @extend .box;
-    &:before {
-        border-top: none;
-        border-right: none;
-    }
-}

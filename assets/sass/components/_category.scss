@@ -1,6 +1,7 @@
 .category-hero {
     .box {
         margin-bottom: 0;
+        padding: 5rem 0;
 
         h1 {
             text-align: center;
@@ -12,13 +13,16 @@
     .category-description {
         background-image: $background-image;
         border-bottom: 1px solid #f1f1f1;
-        padding: 5rem 0;
+        padding: 5rem 0 8rem;
         margin: 0 auto;
-        text-align: justify;
 
         .category-description-wrapper {
             max-width: 600px;
             margin: 0 auto;
+
+            @include until($tablet) {
+                margin: 0 1rem;
+            }
         }
     }
 }
