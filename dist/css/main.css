@@ -4190,7 +4190,7 @@ article.single {
 
 .page-layout.about-page {
   margin-bottom: 5rem;
-  background-image: url("../images/bg.png");
+  background-image: url("../images/bg_2.png");
   border-bottom: 1px solid #f1f1f1;
   padding: 6rem 0; }
   .page-layout.about-page figure {
@@ -4287,7 +4287,7 @@ article.single {
     font-family: "MrsGlows", cursive; }
 
 .category-hero .category-description {
-  background-image: url("../images/bg.png");
+  background-image: url("../images/bg_2.png");
   border-bottom: 1px solid #f1f1f1;
   padding: 5rem 0 8rem;
   margin: 0 auto; }
@@ -4463,7 +4463,7 @@ article.single {
       max-height: 500px; } }
 
 section.spacer {
-  background-image: url("../images/bg.png");
+  background-image: url("../images/bg_2.png");
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
   min-height: 200px;
