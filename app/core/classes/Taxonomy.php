@@ -13,7 +13,7 @@ class Taxonomy
 	 * @param string $multiple Optional. Default multiple name.
 	 */
 	public static function add( $name, $postType = 'post', $config, $singular = 'Entry', $multiple = 'Entries' ) {
-		$domain = Q4VR_TEXT_DOMAIN;
+		$domain = 'classy';
 
 		if ( ! isset( $config['labels'] ) ) {
 			$config['labels'] = array(

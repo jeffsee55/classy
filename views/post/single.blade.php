@@ -6,7 +6,6 @@
 		@include ('post.partials.social')
 		<article class="single">
 			<section class="body content">
-				@include ('post.partials.brides')
 				{{ $post->content() }}
 			</section>
 

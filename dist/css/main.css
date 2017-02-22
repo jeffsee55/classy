@@ -4324,7 +4324,8 @@ article.single {
 
 @font-face {
   font-family: 'MrsGlows';
-  src: url("../fonts/MrsGlows.otf") format("otf");
+  src: url("../fonts/MrsGlows.woff2") format("woff2");
+  src: url("../fonts/MrsGlows.woff") format("woff");
   font-style: normal; }
 
 .home-hero {
