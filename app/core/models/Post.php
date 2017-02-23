@@ -345,6 +345,7 @@ class Post extends Basis {
 	 */
 	public function get_categories()
 	{
+		$categories = [];
 		$postCategories = wp_get_post_categories($this->ID, ['fields' => 'all_with_object_id']);
 		foreach($postCategories as $category)
 		{
