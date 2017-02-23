@@ -51,6 +51,18 @@
     }
 }
 
+.single-post {
+    .social.nav {
+        width: 100%;
+        padding: 0 5%;
+
+        .nav-item {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
 article.single  {
     max-width: $tablet;
     margin: 2rem auto;

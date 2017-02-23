@@ -53,7 +53,7 @@ class Gallery
     {
         $html = '';
     	foreach($this->images as $image) {
-    		$html .= '<div class="column is-12"><div class="gallery-image" style="background-image: url(' . $image[0] . '); height: '. $image[2] . 'px"></div></div>';
+    		$html .= '<div class="column is-12"><img src="' . $image[0] . '"/></div>';
     	}
         return $html;
     }
@@ -65,7 +65,7 @@ class Gallery
         foreach($rows as $row) {
             $height = min($row[0][2], $row[1][2]);
         	foreach($row as $image) {
-        		$html .= '<div class="column is-6"><div class="gallery-image" style="background-image: url(' . $image[0] . '); height: '. $height . 'px"></div></div>';
+        		$html .= '<div class="column is-6"><div class="gallery-image" style="background-image: url(' . $image[0] . '); height: '. ($height / 2) . 'px"></div></div>';
         	}
         }
         return $html;

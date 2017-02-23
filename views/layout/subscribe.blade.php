@@ -1,5 +1,5 @@
 <section class="spacer callout">
-    <div>
+    <div class="callout">
         <div class="callout-text">
             {{ the_field('subscribe_text', 'option') }}
         </div>

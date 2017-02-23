@@ -2,9 +2,7 @@
 @forelse ($posts as $index => $post)
 	@include ($post->get_preview_template($layout))
 	<?php $layout = $post->get_layout(); ?>
-	@if($index == 1)
-		@include ('layout.subscribe')
-	@else
+	@if($index != (count($posts) - 1))
 		<section class="spacer">
 		</section>
 	@endif

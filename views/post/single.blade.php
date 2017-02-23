@@ -20,5 +20,4 @@
 			{{ comments_template() }}
 		</article>
 	@endif
-	@include ('layout.subscribe')
 @stop

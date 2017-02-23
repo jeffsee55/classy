@@ -1,13 +1,20 @@
 .gallery {
     &.columns.flex-wrap {
         margin-bottom: 0;
+
+        .column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     @include from($tablet) {
-        margin: auto -100px;
+        margin: auto -50px;
     }
 
     .gallery-image {
+        width: 100%;
         background-size: cover;
         background-position: center;
     }

@@ -130,8 +130,14 @@ class Appearance {
 		    'header-text' => array( 'Heid & Seek', 'FOOD, FITNESS, FASHION, FELINES' ),
 		) );
 
-		add_image_size('wide', 1500, 700, TRUE);
+		add_image_size('gallery', 900, 900, false);
 
-		add_image_size('hero', 2000, 1000, ['center', 'bottom']);
+		add_image_size('hero', 1600, 1600, false);
+
+		add_filter( 'image_size_names_choose', function($sizes) {
+			return array_merge( $sizes, array(
+		        'gallery' => __( 'Gallery Size' ),
+		    ) );
+		});
 	}
 }

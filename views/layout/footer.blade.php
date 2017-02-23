@@ -1,3 +1,5 @@
+@include ('layout.subscribe')
+
 <footer class="level is-mobile">
     @if(have_rows('social_links', 'option'))
         <div class="level-left">

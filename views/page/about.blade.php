@@ -34,7 +34,7 @@
 				</div>
 			</article>
 		</section>
-		<section class="spacer columns level is-gapless contact-info">
+		<section class="spacer columns level contact-info is-multiline">
 			@if( have_rows('contact_box') )
 			    @while ( have_rows('contact_box') )
 					<?php the_row(); ?>

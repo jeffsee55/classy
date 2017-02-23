@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! bulma.io v0.2.3 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -3891,15 +3892,13 @@ a.panel-block:hover {
 
 footer {
   margin-bottom: 0 !important;
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: whitesmoke;
-  color: #b5b5b5; }
+  background: #454B61;
+  color: white; }
   footer > div {
     padding: 1rem; }
     footer > div .social {
-      padding: 0.7rem; }
+      padding: 0.7rem;
+      color: white; }
     @media screen and (max-width: 768px) {
       footer > div {
         padding: 0.6rem; }
@@ -3914,12 +3913,17 @@ footer {
 
 .gallery.columns.flex-wrap {
   margin-bottom: 0; }
+  .gallery.columns.flex-wrap .column {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 @media screen and (min-width: 769px) {
   .gallery {
-    margin: auto -100px; } }
+    margin: auto -50px; } }
 
 .gallery .gallery-image {
+  width: 100%;
   background-size: cover;
   background-position: center; }
 
@@ -4167,6 +4171,13 @@ header .nav {
       .hero .title {
         font-size: 48px; } }
 
+.single-post .social.nav {
+  width: 100%;
+  padding: 0 5%; }
+  .single-post .social.nav .nav-item {
+    padding-top: 0;
+    padding-bottom: 0; }
+
 article.single {
   max-width: 769px;
   margin: 2rem auto; }
@@ -4246,15 +4257,14 @@ article.single {
   display: block;
   padding: 4rem 2rem;
   position: relative;
-  margin-bottom: 4rem; }
+  margin-bottom: 3.1rem; }
   @media screen and (min-width: 769px) {
     .box {
-      padding: 3rem 5rem;
-      margin-bottom: 0; } }
+      padding: 3rem 5rem; } }
   @media screen and (min-width: 980px) {
     .box {
       padding: 4rem 4rem;
-      margin-bottom: 4rem; } }
+      margin-bottom: 3.1rem; } }
   .box a {
     position: relative;
     z-index: 1000; }
@@ -4410,7 +4420,7 @@ article.single {
       padding: 0.5rem 1rem;
       color: white;
       position: absolute;
-      top: -1.1rem;
+      top: -19px;
       margin: 0 auto;
       left: 0;
       right: 0;
@@ -4437,16 +4447,27 @@ article.single {
       text-align: center; }
     .preview .preview-text .preview-excerpt {
       display: block;
-      max-width: 300px;
+      max-width: 80%;
       margin: 0 auto;
       text-align: justify; }
       @media screen and (min-width: 769px) {
         .preview .preview-text .preview-excerpt {
-          display: none; } }
+          max-width: 60%; } }
       @media screen and (min-width: 980px) {
         .preview .preview-text .preview-excerpt {
           display: block;
-          max-width: 300px; } }
+          max-width: 70%; } }
+      .preview .preview-text .preview-excerpt ul.preview-list {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; }
+        .preview .preview-text .preview-excerpt ul.preview-list li:after {
+          content: "•";
+          padding: 0 5px; }
+        .preview .preview-text .preview-excerpt ul.preview-list li:last-child:after {
+          content: ''; }
     .preview .preview-text .read-more {
       text-align: center;
       display: block;
@@ -4474,16 +4495,16 @@ section.spacer {
   align-items: center;
   justify-content: center; }
   section.spacer.short {
-    min-height: 100px; }
+    min-height: 90px; }
   section.spacer.callout {
     padding-top: 2rem;
     padding-bottom: 5rem; }
-  section.spacer div {
+  section.spacer div.callout {
     margin: auto;
     width: 300px;
     text-align: center; }
-    section.spacer div .callout-text {
+    section.spacer div.callout .callout-text {
       margin-bottom: 1rem; }
-      section.spacer div .callout-text .font-cursive h1 {
+      section.spacer div.callout .callout-text .font-cursive h1 {
         font-size: 90px;
         line-height: 1; }

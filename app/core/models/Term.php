@@ -37,6 +37,13 @@ class Term extends Basis {
         return $this->name;
     }
 
+    public function get_color()
+    {
+        $background_color = get_field('background_color', 'category_' . $this->term_id);
+        if($background_color)
+            return $background_color;
+    }
+
     public function description()
     {
         $description = get_field('term_description', 'category_' . $this->term_id);
@@ -44,5 +51,10 @@ class Term extends Basis {
             return $description;
 
         return $this->description;
+    }
+
+    public function should_hide_date()
+    {
+        return get_field('should_hide_date', 'category_' . $this->term_id);
     }
 }

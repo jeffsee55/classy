@@ -86,7 +86,7 @@
             padding: 0.5rem 1rem;
             color: white;
             position: absolute;
-            top: -1.1rem;
+            top: -19px;
             margin: 0 auto;
             left: 0;
             right: 0;
@@ -120,17 +120,38 @@
 
         .preview-excerpt {
             display: block;
-            max-width: 300px;
+            max-width: 80%;
             margin: 0 auto;
             text-align: justify;
 
             @include from($tablet) {
-                display: none;
+                max-width: 60%;
             }
 
             @include from($desktop) {
                 display: block;
-                max-width: 300px;
+                max-width: 70%;
+            }
+
+            ul.preview-list {
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+                li {
+
+                    // display: inline-block;
+                    //
+                    &:after {
+                        content: "•";
+                        padding: 0 5px;
+                    }
+                    &:last-child {
+                        &:after { content: '' }
+                    }
+                }
             }
         }
 

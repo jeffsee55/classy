@@ -1,16 +1,14 @@
 footer {
     margin-bottom: 0 !important;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: $light;
-    color: $grey-light;
+    background: $navy;
+    color: $white;
 
     & > div {
         padding: 1rem;
 
         .social {
             padding: 0.7rem;
+            color: $white;
         }
 
         @include until($tablet) {

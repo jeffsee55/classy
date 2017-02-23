@@ -310,7 +310,21 @@ class Post extends Basis {
 	public function get_date() {
 		$date = new \DateTime($this->post_date);
 		$date = date_format($date, 'M d');
+
 		return $date;
+	}
+
+	/**
+	 * Determine if date should be shown
+	 *
+	 * @return bool
+	 */
+	public function should_hide_date() {
+		foreach($this->get_categories() as $category) {
+			return $category->should_hide_date();
+		}
+
+		return true;
 	}
 
 	/**
@@ -319,10 +333,26 @@ class Post extends Basis {
 	 * @return string
 	 */
 	public function get_category() {
-		$categories = wp_get_post_categories($this->ID, [
-			'fields' => 'names'
-		]);
+		$categories = $this->get_categories();
+
 		return array_shift($categories);
+	}
+
+	/**
+	 * Returns all categories as custom Term class object
+	 *
+	 * @return array Term
+	 */
+	public function get_categories()
+	{
+		$postCategories = wp_get_post_categories($this->ID, ['fields' => 'all_with_object_id']);
+		foreach($postCategories as $category)
+		{
+			// if any return true
+			$categories[] = new Term($category);
+		}
+
+		return $categories;
 	}
 
 	/**
@@ -340,12 +370,15 @@ class Post extends Basis {
 	 * @return string (hex)
 	 */
 	public function get_category_color() {
-		$category = strtolower($this->get_category());
-		if($category == 'fitness')
+		$category = $this->get_category();
+
+		if($color = $category->get_color())
+			return $color;
+		if($category->slug == 'fitness')
 			return 'bg-stone';
-		if($category == 'fashion')
+		if($category->slug == 'fashion')
 			return 'bg-rose';
-		if($category == 'feline')
+		if($category->slug == 'feline')
 			return 'bg-navy';
 
 		return 'bg-stone';
@@ -555,6 +588,18 @@ class Post extends Basis {
 			if ( ! $strip ) {
 				$text .= '</p>';
 			}
+		}
+
+		if(have_rows('preview_list', $this->ID)) {
+			$items = get_field('preview_list', $this->ID);
+			$items = array_column($items, 'item');
+			$text = '<ul class="preview-list">';
+			foreach($items as $item) {
+				$text .= '<li>' . $item . '</li>';
+			}
+			$text .= '</ul>';
+
+			$text .= ' <a href="' . $this->get_permalink() . '" class="read-more">' . trim( $readmore ) . '</a>';
 		}
 
 		return trim( $text );

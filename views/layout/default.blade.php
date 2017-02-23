@@ -23,6 +23,6 @@
             {{ get_footer() }}
 
             {{ wp_footer() }}
-        <main>
+        </main>
     </body>
 </html>
