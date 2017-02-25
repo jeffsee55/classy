@@ -1,5 +1,4 @@
 section.spacer {
-    background-image: $background-image;
     border-top: 1px solid #f1f1f1;
     border-bottom: 1px solid #f1f1f1;
     min-height: 200px;
@@ -13,7 +12,7 @@ section.spacer {
 
     &.callout {
         padding-top: 2rem;
-        padding-bottom: 5rem;
+        padding-bottom: 4rem;
     }
 
     div.callout {

@@ -12,6 +12,11 @@
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <title>{{ wp_title('|', true, 'right'); }}</title>
         {{ wp_head() }}
+        <style>
+            .spacer {
+                background-image: url({{ get_field('background_image', 'option') }});
+            }
+        </style>
     </head>
     <body {{ body_class() }}>
 
