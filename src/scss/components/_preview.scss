@@ -61,7 +61,7 @@
         }
 
         @include until($tablet) {
-            top: -3rem;
+            top: -1.5rem;
 
             h1 {
                 text-align: center;

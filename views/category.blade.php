@@ -5,7 +5,7 @@
     <section class="hero is-medium category-hero">
     	<div class="hero-body">
             <div class="box bottom">
-                <h1>{{$term->name}}</h1>
+                <h1 class="rellax" data-rellax-speed="-2">{{$term->name}}</h1>
             </div>
             <div class="category-description">
                 <div class="category-description-wrapper">

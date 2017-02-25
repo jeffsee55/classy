@@ -7390,7 +7390,7 @@ article.single {
 
 @media screen and (max-width: 768px) {
   .preview .preview-text {
-    top: -3rem;
+    top: -1.5rem;
   }
   .preview .preview-text h1 {
     text-align: center;

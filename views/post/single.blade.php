@@ -16,8 +16,6 @@
 		            </a>
 		        @endforeach
 		    </div>
-
-			{{ comments_template() }}
 		</article>
 	@endif
 @stop

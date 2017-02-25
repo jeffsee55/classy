@@ -13,7 +13,7 @@
         <title>{{ wp_title('|', true, 'right'); }}</title>
         {{ wp_head() }}
         <style>
-            .spacer {
+            .spacer, .category-description {
                 background-image: url({{ get_field('background_image', 'option') }});
             }
         </style>

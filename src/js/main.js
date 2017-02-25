@@ -1,9 +1,9 @@
 import jquery from 'jquery';
+import Rellax from 'rellax';
 import header from './header';
-import animation from './animation';
 import home from './home';
 
 jquery();
+Rellax();
 header();
-animation();
 home();
