@@ -44,21 +44,9 @@ class Appearance {
 	 */
 	public function enqueue_scripts() {
 
-		if ( 'production' === Classy::get_config_var( 'environment' ) ) {
-
-			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'dist/js/production.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-
-		} else {
-
-			wp_enqueue_script( 'scrollreveal_script', "https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js", array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'svg_script', "//cdn.jsdelivr.net/vivus/latest/vivus.min.js", array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'theme_scripts', CLASSY_THEME_DIR . 'dist/js/scripts.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'header_script', CLASSY_THEME_DIR . 'dist/js/header.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'header_script', CLASSY_THEME_DIR . 'dist/js/main.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 			wp_enqueue_script( 'home_script', CLASSY_THEME_DIR . 'dist/js/home.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
 			wp_enqueue_script( 'animation_script', CLASSY_THEME_DIR . 'dist/js/animation.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'media_script', CLASSY_THEME_DIR . 'dist/js/media.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-
-		}
 
 	}
 

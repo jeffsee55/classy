@@ -1,0 +1,207 @@
+body {
+   font-family: $family-sans-serif;
+   font-size: $size-5;
+
+   // bulma doesn't drill down for its tag class
+   // so the body for tag archives gets this class added
+   &.tag {
+      height: initial;
+      align-items: initial;
+      background-color: initial;
+      border-radius: initial;
+      color: initial;
+      display: initial;
+      font-size: initial;
+      justify-content: initial;
+      line-height: initial;
+      padding-left: initial;
+      padding-right: initial;
+      vertical-align: initial;
+      white-space: initial;
+   }
+}
+
+@include from($tablet) {
+   .admin-bar {
+      main {
+         padding-top: $nav-height;
+      }
+
+      header .nav {
+         top: 32px;
+      }
+   }
+}
+
+.flex-wrap {
+   flex-wrap: wrap;
+}
+
+main {
+   padding-top: $nav-height;
+}
+
+.container {
+   margin: auto;
+}
+
+p {
+   margin-bottom: 2rem;
+   overflow: hidden;
+}
+
+.content a:not(.button) {
+   border-bottom: none;
+
+   &:visited {
+      color: $dark;
+   }
+}
+
+section.section {
+   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: $family-header;
+   font-weight: normal;
+
+   a {
+      font-family: $family-header;
+      color: $grey-dark;
+      font-weight: normal;
+   }
+}
+
+h1 {
+   font-size: $size-1;
+}
+
+h2 {
+   font-size: $size-2;
+}
+
+h3 {
+   font-size: $size-3;
+}
+
+h4 {
+   font-size: $size-4;
+}
+
+h5 {
+   font-size: $size-5;
+}
+
+.title {
+   font-weight: normal;
+   text-transform: uppercase;
+}
+
+.font-cursive {
+   font-family: $family-cursive;
+   h1, h2, h3, h4, h5, p, a {
+      font-family: $family-cursive;
+   }
+
+   p {
+      font-size: $size-2;
+   }
+}
+
+h1 .font-cursive {
+   color: white;
+   font-size: 75px;
+
+   @include from($tablet) {
+      font-size: 150px;
+   }
+}
+
+.single-post .preview-only {
+   display: none;
+}
+
+ul.header-list {
+   padding-left: 0;
+   display: flex;
+   list-style: none;
+   text-align: center;
+   margin-bottom: 1.5rem;
+   flex-wrap: wrap;
+   justify-content: center;
+
+   li {
+      padding: 0 1rem;
+      // border-right: 1px solid;
+
+      &:last-child {
+         border-right: none;
+      }
+   }
+}
+
+.content blockquote {
+   border-left: none;
+   letter-spacing: 2px;
+   line-height: 2;
+   position: relative;
+   background: none;
+   padding: 4.5rem 0;
+
+   @include from($tablet) {
+      padding: 4.5rem 3.5rem;
+   }
+
+   p {
+      margin-bottom: 0;
+   }
+
+   &:before {
+      @include from($tablet) {
+         content: '';
+         background-image: url('../images/brush_block.svg');
+         position: absolute;
+         z-index: -1;
+         background-size: 100% 100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         opacity: 0.6;
+         left: 0rem;
+         right: 0rem;
+         bottom: 0;
+         top: 0;
+      }
+   }
+
+   &.credits {
+      margin-top: 1rem;
+      border-left: none;
+
+      a {
+         color: $dark
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+         font-weight: 400;
+         text-transform: uppercase;
+         font-family: $family-header;
+      }
+   }
+}
+
+.text-left {
+   figure {
+      order: 2
+   }
+}
+
+date {
+   text-decoration: none;
+   color: $grey-dark;
+   font-family: $family-cursive;
+}
+
+.is-visible {
+   visibility: visible !important;
+}

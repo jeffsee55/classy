@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "5d83c3edd9a754266205b016a78b0226",
     "content-hash": "7247d57aa0c437947a1ec4fc15ea7888",
     "packages": [
         {
@@ -52,7 +53,7 @@
                 "php",
                 "sdk"
             ],
-            "time": "2017-02-22T02:30:56+00:00"
+            "time": "2017-02-22 02:30:56"
         },
         {
             "name": "composer/installers",
@@ -159,7 +160,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13T20:53:52+00:00"
+            "time": "2016-08-13 20:53:52"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -221,7 +222,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-10-08T15:01:37+00:00"
+            "time": "2016-10-08 15:01:37"
         },
         {
             "name": "guzzlehttp/promises",
@@ -272,7 +273,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20T10:07:11+00:00"
+            "time": "2016-12-20 10:07:11"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -337,7 +338,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-21T01:20:32+00:00"
+            "time": "2017-02-21 01:20:32"
         },
         {
             "name": "illuminate/container",
@@ -378,7 +379,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2015-01-29T16:04:27+00:00"
+            "time": "2015-01-29 16:04:27"
         },
         {
             "name": "illuminate/events",
@@ -421,7 +422,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-10-02T19:49:50+00:00"
+            "time": "2014-10-02 19:49:50"
         },
         {
             "name": "illuminate/filesystem",
@@ -464,7 +465,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-12-29T18:11:33+00:00"
+            "time": "2014-12-29 18:11:33"
         },
         {
             "name": "illuminate/support",
@@ -512,7 +513,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2015-01-27T20:51:43+00:00"
+            "time": "2015-01-27 20:51:43"
         },
         {
             "name": "illuminate/view",
@@ -557,7 +558,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2015-01-27T20:51:43+00:00"
+            "time": "2015-01-27 20:51:43"
         },
         {
             "name": "psr/http-message",
@@ -607,7 +608,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "symfony/finder",
@@ -654,7 +655,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03T08:01:13+00:00"
+            "time": "2015-01-03 08:01:13"
         },
         {
             "name": "windwalker/data",
@@ -698,7 +699,7 @@
                 "framework",
                 "windwalker"
             ],
-            "time": "2016-02-12T15:36:22+00:00"
+            "time": "2016-02-12 15:36:22"
         },
         {
             "name": "windwalker/registry",
@@ -747,7 +748,7 @@
                 "windwalker"
             ],
             "abandoned": "windwalker/structure",
-            "time": "2016-03-07T10:02:08+00:00"
+            "time": "2016-03-07 10:02:08"
         },
         {
             "name": "windwalker/renderer",
@@ -805,7 +806,7 @@
                 "renderer",
                 "windwalker"
             ],
-            "time": "2016-02-12T15:36:22+00:00"
+            "time": "2016-02-12 15:36:22"
         }
     ],
     "packages-dev": [
@@ -847,7 +848,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2017-01-19T14:23:36+00:00"
+            "time": "2017-01-19 14:23:36"
         },
         {
             "name": "phpmd/phpmd",
@@ -913,7 +914,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2017-01-20T14:41:10+00:00"
+            "time": "2017-01-20 14:41:10"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -991,7 +992,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-02-02T03:30:00+00:00"
+            "time": "2017-02-02 03:30:00"
         },
         {
             "name": "symfony/config",
@@ -1047,7 +1048,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-14T16:27:43+00:00"
+            "time": "2017-02-14 16:27:43"
         },
         {
             "name": "symfony/dependency-injection",
@@ -1110,7 +1111,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-16T22:46:52+00:00"
+            "time": "2017-02-16 22:46:52"
         },
         {
             "name": "symfony/filesystem",
@@ -1159,7 +1160,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-08T20:47:33+00:00"
+            "time": "2017-01-08 20:47:33"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -1195,7 +1196,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2016-08-29T20:04:47+00:00"
+            "time": "2016-08-29 20:04:47"
         }
     ],
     "aliases": [],
