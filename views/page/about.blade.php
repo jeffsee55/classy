@@ -34,7 +34,7 @@
 				</div>
 			</article>
 		</section>
-		<section class="spacer columns level contact-info is-multiline">
+		<section class="columns level contact-info is-multiline">
 			@if( have_rows('contact_box') )
 			    @while ( have_rows('contact_box') )
 					<?php the_row(); ?>
@@ -62,5 +62,4 @@
 			@endif
 		</section>
 	@endif
-	@include ('instagram')
 @stop

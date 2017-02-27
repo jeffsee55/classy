@@ -1,5 +1,11 @@
 @include ('layout.subscribe')
 
+<section class="footer-widget">
+<?php
+   dynamic_sidebar('footer')
+?>
+</section>
+
 <footer class="level is-mobile">
     @if(have_rows('social_links', 'option'))
         <div class="level-left">

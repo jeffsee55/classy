@@ -141,6 +141,20 @@ ul.header-list {
    }
 }
 
+.icon {
+   &.is-large {
+      i.fa-etsy {
+         font-size: 33px;
+      }
+   }
+
+   &.is-medium {
+      i.fa-etsy {
+         font-size: 24px;
+      }
+   }
+}
+
 .content blockquote {
    border-left: none;
    letter-spacing: 2px;

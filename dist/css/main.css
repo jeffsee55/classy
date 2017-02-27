@@ -6539,6 +6539,10 @@ a.panel-block:hover {
   border-bottom-color: #3C3D3E;
 }
 
+.footer-widget {
+  padding: 10px;
+}
+
 footer {
   margin-bottom: 0 !important;
   background: #3C3D3E;
@@ -6570,6 +6574,8 @@ footer > div .social {
 
 footer .level-right.copyright {
   margin-top: 0;
+  font-family: "mostra-nuova", "Futura", sans-serif;
+  font-size: 18px;
 }
 
 .gallery.columns.flex-wrap {
@@ -6757,6 +6763,14 @@ ul.header-list li {
 
 ul.header-list li:last-child {
   border-right: none;
+}
+
+.icon.is-large i.fa-etsy {
+  font-size: 33px;
+}
+
+.icon.is-medium i.fa-etsy {
+  font-size: 24px;
 }
 
 .content blockquote {
@@ -7312,6 +7326,11 @@ article.single {
   padding-bottom: 0;
   padding-right: 0;
   padding-left: 0;
+}
+
+.insta img {
+  display: block;
+  margin: auto;
 }
 
 .preview {

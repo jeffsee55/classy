@@ -1,3 +1,7 @@
+.footer-widget {
+      padding: 10px;
+}
+
 footer {
     margin-bottom: 0 !important;
     background: $primary;
@@ -28,5 +32,7 @@ footer {
 
     .level-right.copyright {
         margin-top: 0;
+        font-family: $family-header;
+        font-size: $size-5;
     }
 }
