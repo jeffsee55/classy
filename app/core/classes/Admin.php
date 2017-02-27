@@ -22,7 +22,17 @@ class Admin {
 		add_filter( 'tiny_mce_before_init', [$this, 'my_mce_before_init_insert_formats']);
 		add_action( 'wp_loaded', [$this, 'addOptionsPage'] );
 		add_action( 'wp_loaded', [$this, 'addPiecesTaxonomy'] );
+		add_filter('acf/load_field/type=message', [$this, 'notifySubscribers'], 10, 3);
     }
+
+	 public function notifySubscribers($field)
+	 {
+		 global $post;
+		 
+		 if($field['label'] == 'Notify Subscribers')
+			 $field['message'] = '<div><a class="button button-primary" style="margin-bottom: 1rem; float: right" href="' . admin_url() . 'admin-post.php?action=classy_notify_subscribers&post_id=' . $post->ID . '">Notify</a></div>';
+		 return $field;
+	 }
 
 	public function addOptionsPage()
 	{

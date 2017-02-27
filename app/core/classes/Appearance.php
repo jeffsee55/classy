@@ -44,9 +44,13 @@ class Appearance {
 	 */
 	public function enqueue_scripts() {
 
-			wp_enqueue_script( 'header_script', CLASSY_THEME_DIR . 'dist/js/main.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'home_script', CLASSY_THEME_DIR . 'dist/js/home.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
-			wp_enqueue_script( 'animation_script', CLASSY_THEME_DIR . 'dist/js/animation.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_enqueue_script( 'main_script', CLASSY_THEME_DIR . 'dist/js/main.js', array( 'jquery' ), CLASSY_THEME_VERSION, true );
+			wp_localize_script( "main_script", 'classy',
+				[
+					'ajaxUrl' => admin_url( 'admin-ajax.php' ), //url for php file that process ajax request to WP
+					'nonce' => wp_create_nonce( 'classy' ),// this is a unique token to prevent form hijacking
+				]
+			);
 
 	}
 

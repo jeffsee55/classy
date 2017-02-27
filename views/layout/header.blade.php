@@ -17,7 +17,7 @@
 						</span>
 					@endforeach
 				@endif
-				{{ get_custom_logo() }}
+				<img style="max-height: 90px" src="{{ get_stylesheet_directory_uri() }}/dist/images/logo.png">
 				@if ($items = $menu->get_items(2, 2))
 					@foreach ($items as $item)
 						<span class="nav-item is-tab"><a href="{{ $item->get_link() }}">{{ $item->get_title() }}</a>

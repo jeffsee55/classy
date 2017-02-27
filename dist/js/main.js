@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10303,8 +10303,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rellax__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rellax___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rellax__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__subscribe__ = __webpack_require__(5);
+
 
 
 
@@ -10314,6 +10316,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()();
 __WEBPACK_IMPORTED_MODULE_1_rellax___default()();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__header__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__home__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__subscribe__["a" /* default */])();
 
 /***/ }),
 /* 2 */
@@ -10322,8 +10325,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__home__["a" /* default */])();
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10400,7 +10402,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__home__["a" /* default */])();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10414,6 +10416,55 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__home__["a" /* default */])();
             $('.home-hero').css('height', distance + 'px');
         }
     });
+};
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = function () {
+   $(document).ready(function () {
+
+      // process the form
+      $('#classy_subscribe').submit(function (event) {
+         event.preventDefault();
+         $('#classy_subscribe_button').attr('disabled', 'disabled');
+         $('#classy_subscribe_button').val('sending');
+         // get the form data
+         // there are many ways to get this data using jQuery (you can use the class or id also)
+         var formData = {
+            'subscriber_email': $('input[name=subscriber_email]').val(),
+            'action': $('input[name=action]').val()
+         };
+
+         // process the form
+         $.ajax({
+            type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url: classy.ajaxUrl, // the url where we want to POST
+            data: formData, // our data object
+            dataType: 'json', // what type of data do we expect back from the server
+            encode: true
+         })
+         // using the done promise callback
+         .done(function (response) {
+
+            console.log(response.data);
+            if (response.data.success == true) {
+               $('.callout-error').remove();
+               $('#classy_subscribe').replaceWith('<p>' + response.data.message + '</p>');
+               return;
+            }
+
+            $('.callout-error').remove();
+            $('.callout-text').append('<p class="callout-error" style="text-align: center;">' + response.data.message + '</p>');
+            $('#classy_subscribe_email').val('');
+            $('#classy_subscribe_button').attr('disabled', false);
+            $('#classy_subscribe_button').val('try again');
+         });
+      });
+   });
 };
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
@@ -10679,8 +10730,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 7 */,
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);

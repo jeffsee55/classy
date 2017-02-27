@@ -6784,7 +6784,7 @@ ul.header-list li:last-child {
     background-image: url("../images/brush_block.svg");
     position: absolute;
     z-index: -1;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.6;
@@ -7390,7 +7390,9 @@ article.single {
 
 @media screen and (max-width: 768px) {
   .preview .preview-text {
-    top: -1.5rem;
+    top: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .preview .preview-text h1 {
     text-align: center;
@@ -7399,11 +7401,8 @@ article.single {
 
 @media screen and (min-width: 769px) {
   .preview .preview-text {
-    padding: 3rem 0;
+    padding: 4rem 0;
     margin: 0 4rem;
-  }
-  .preview .preview-text.wide-layout {
-    top: -9rem;
   }
 }
 
@@ -7500,30 +7499,6 @@ article.single {
   margin-top: 1rem;
   font-size: 1.4rem;
   text-transform: uppercase;
-}
-
-.wide {
-  overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .wide {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .wide {
-    max-height: 500px;
-  }
 }
 
 section.spacer {

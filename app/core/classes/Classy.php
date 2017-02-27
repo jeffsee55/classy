@@ -10,6 +10,7 @@
 namespace Classy;
 
 use Windwalker\Renderer\BladeRenderer;
+use Classy\Mailer;
 
 /**
  * Class Classy.
@@ -63,6 +64,80 @@ class Classy {
 		add_filter( 'theme_page_templates', array( $this, 'filter_templates' ) );
 
 		add_action('init', [$this, 'init_admin']);
+
+		add_action('wp_ajax_nopriv_classy_subscribe', [$this, 'processSubscriber']);
+		add_action('wp_ajax_classy_subscribe', [$this, 'processSubscriber']);
+
+		add_action('admin_post_classy_verify_subscriber', [$this, 'verifySubscriber']);
+		add_action('admin_post_nopriv_classy_verify_subscriber', [$this, 'verifySubscriber']);
+
+		add_action('admin_post_classy_notify_subscribers', [$this, 'notifySubscribers']);
+
+		add_action('admin_post_classy_unsubscribe', [$this, 'unsubscribe']);
+		add_action('admin_post_nopriv_classy_subscribe', [$this, 'unsubscribe']);
+
+		add_action('phpmailer_init', [new Mailer, 'mailtrap']);
+
+      add_filter( 'wp_mail_from_name', function() {
+         return str_replace("&amp;", "&", get_bloginfo('name'));
+		});
+
+      add_filter( 'wp_mail_from', function() {
+      	return 'info@' . 'heidandseek.com';
+      } );
+	}
+
+	public function processSubscriber()
+	{
+		if(empty($_POST['subscriber_email']))
+			wp_send_json_error(['success' => false, 'message' => 'Please provide an email address']);
+
+		if(! filter_var($_POST['subscriber_email'], FILTER_VALIDATE_EMAIL))
+			wp_send_json_error(['success' => false, 'message' => 'Email address is invalid']);
+
+		if(email_exists($_POST['subscriber_email']))
+			wp_send_json_error(['success' => false, 'message' => "Looks like you're already subscribed! Click <strong><a href=" . get_site_url() . ">here</a></strong> to send out an email verification"]);
+
+		$userdata = array(
+		    'user_login'  =>  $_POST['subscriber_email'],
+			 'user_email' => $_POST['subscriber_email'],
+		    'user_pass'   =>  hash('classy'),
+			 'role' => 'subscriber'
+		);
+
+		$user_id = wp_insert_user( $userdata ) ;
+		if(is_wp_error($user_id))
+			wp_send_json_error(['success' => false, 'message' => 'There was a problem signign up.']);
+
+		Mailer::sendVerification($_POST['subscriber_email']);
+		wp_send_json_error(['success' => true, 'message' => 'Please check your email']);
+	}
+
+	public function verifySubscriber()
+	{
+		if(! isset($_GET['email']))
+			wp_redirect(get_site_url() . '?message="subscriber_not_found"');
+
+		$user = get_user_by('email', $_GET['email']);
+		update_user_meta($user->ID, 'verified', true);
+		wp_redirect(get_site_url() . '?message="subscriber_verified"');
+		die();
+	}
+
+	public function unsubscribe()
+	{
+		if(! isset($_GET['email']))
+			wp_redirect(get_site_url() . '?message="subscriber_not_found"');
+
+		$user = get_user_by('email', $_GET['email']);
+		wp_delete_user($user->ID);
+		wp_redirect(get_site_url() . '?message="unsubscribed"');
+		die();
+	}
+
+	public function notifySubscribers()
+	{
+		Mailer::sendNotification($_GET['post_id']);
 	}
 
 	/**
