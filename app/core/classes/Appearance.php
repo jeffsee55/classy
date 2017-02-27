@@ -122,7 +122,11 @@ class Appearance {
 		    'header-text' => array( 'Heid & Seek', 'FOOD, FITNESS, FASHION, FELINES' ),
 		) );
 
-		add_image_size('gallery', 900, 900, false);
+		// we don't care about the height,only the width
+		add_image_size('gallery', 2000, 900, false);
+
+		// resize post thumnbnails to be a usable size
+		set_post_thumbnail_size(300, 300, true);
 
 		add_image_size('hero', 1600, 1600, false);
 
