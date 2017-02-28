@@ -28,7 +28,7 @@ class Admin {
 	 public function notifySubscribers($field)
 	 {
 		 global $post;
-		 
+
 		 if($field['label'] == 'Notify Subscribers')
 			 $field['message'] = '<div><a class="button button-primary" style="margin-bottom: 1rem; float: right" href="' . admin_url() . 'admin-post.php?action=classy_notify_subscribers&post_id=' . $post->ID . '">Notify</a></div>';
 		 return $field;
@@ -71,9 +71,9 @@ class Admin {
 				'wrapper' => true,
 			),
 			array(
-				'title' => 'Credits',
+				'title' => 'Brush Quote',
 				'block' => 'blockquote',
-				'classes' => 'credits',
+				'classes' => 'brush',
 				'wrapper' => true,
 			),
 			array(

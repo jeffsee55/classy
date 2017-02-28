@@ -257,6 +257,16 @@ class Post extends Basis {
 	}
 
 	/**
+	 * Has post thumbnail
+	 *
+	 * @return bool
+	 */
+	public function has_featured_image()
+	{
+		return has_post_thumbnail($this->ID);
+	}
+
+	/**
 	 * Returns post thumbnail.
 	 *
 	 * @return Image

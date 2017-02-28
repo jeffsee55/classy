@@ -11,20 +11,6 @@ class Gallery
     {
 		$return = $output; // fallback
 
-		// $query_images_args = array(
-		//     'post_type'      => 'attachment',
-		//     'post_mime_type' => 'image',
-		// 	'post__in' 		 => explode(',', $atts['ids']),
-		//     'post_status'    => 'inherit',
-		//     'posts_per_page' => -1,
-		// );
-		// $query_images = new \WP_Query( $query_images_args );
-        //
-		// $images = array();
-		// // foreach ( $query_images->posts as $image ) {
-		// // 	$images[] = wp_get_attachment_image_src($image->ID, $atts['size']);
-		// // }
-
         $images = [];
         foreach(explode(',', $atts['ids']) as $id)
         {
@@ -38,7 +24,7 @@ class Gallery
 
     public function display()
     {
-    	$html = '<div class="columns flex-wrap gallery">';
+    	$html = '<div class="columns is-multiline is-mobile flex-wrap gallery">';
     	if($this->columns == 1)
             $html .= $this->singleColumnImages();
     	if($this->columns == 2)
@@ -65,7 +51,8 @@ class Gallery
         foreach($rows as $row) {
             $height = min($row[0][2], $row[1][2]);
         	foreach($row as $image) {
-        		$html .= '<div class="column is-6"><div class="gallery-image" style="background-image: url(' . $image[0] . '); height: '. ($height / 2) . 'px"></div></div>';
+        		$html .= '<div class="column is-6-mobile is-4-tablet"><div class="gallery-image"><img src="' . $image[0] . '"></div></div>';
+
         	}
         }
         return $html;

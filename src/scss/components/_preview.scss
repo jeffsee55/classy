@@ -28,7 +28,7 @@
         }
     }
 
-    figure {
+    figure, .about-instagram {
         position: relative;
         background-size: cover;
         background-position: center;
@@ -50,6 +50,17 @@
             width: 110%;
         }
     }
+
+    .about-instagram {
+      border: none;
+      display: none;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      @include from($tablet) {
+         display: block;
+      }
+   }
 
     .preview-text {
         position: relative;

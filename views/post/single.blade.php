@@ -3,7 +3,6 @@
 @section('content')
 	@if ($post)
 		@include ('post.partials.hero')
-		@include ('post.partials.social')
 		<article class="single">
 			<section class="body content">
 				{{ $post->content() }}
