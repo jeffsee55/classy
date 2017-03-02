@@ -63,7 +63,7 @@ $post_formats = array(
  * @link https://github.com/anrw/classy/wiki/Sidebars
  * @var array
  */
-$sidebars = array('Footer');
+$sidebars = array('footer' => 'Footer');
 
 
 /**
